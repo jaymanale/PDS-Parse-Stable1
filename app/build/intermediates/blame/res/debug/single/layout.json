@@ -1,0 +1,26 @@
+[
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_add_link.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\activity_add_link.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login_or_signup.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\activity_login_or_signup.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_authenticate.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\activity_authenticate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\user_list_item.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\user_list_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_select_users.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\activity_select_users.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\layout\\activity_main.xml"
+    }
+]

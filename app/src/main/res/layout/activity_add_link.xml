@@ -1,0 +1,110 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddLinkActivity"
+    android:weightSum="1">
+
+    <EditText
+        android:id="@+id/editText1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="First Name"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:layout_weight="0.10">
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Last Name"
+        android:ems="10"
+        android:inputType="text"
+        android:textSize="25dp"
+        android:layout_weight="0.10">>
+
+    </EditText>
+
+    <EditText
+        android:id="@+id/editText3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Card No"
+
+        android:textSize="25dp"
+        android:inputType="number"
+        android:layout_weight="0.10"/>
+    <EditText
+        android:id="@+id/editText4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:hint="Card type"
+
+        android:textSize="25dp"
+        android:inputType="textCapCharacters"
+        android:layout_weight="0.10"/>
+
+    <!--android:gravity="top|left"-->
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:ems="10"
+        android:hint="Mobile No"
+
+        android:textSize="25dp"
+        android:inputType="number"
+        android:layout_weight="0.10"/>
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:ems="10"
+        android:inputType="textPostalAddress"
+        android:textSize="25dp"
+        android:layout_weight="0.28"/>
+
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/editText6"-->
+    <!--android:ems="10"-->
+    <!--android:hint="Address"-->
+    <!--android:gravity="top|left"-->
+    <!--android:textSize="25dp"-->
+    <!--android:inputType="textMultiLine"-->
+    <!--android:layout_weight="0.29" />-->
+    <!--<EditText-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/editText7"-->
+    <!--android:ems="10"-->
+    <!--android:hint="LastSeen"-->
+    <!--android:gravity="top|left"-->
+    <!--android:textSize="25dp"-->
+    <!--android:inputType="datetime"/>-->
+
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:text="Post"
+        android:longClickable="false"
+        android:background="#519af4"
+        android:textSize="20sp" />
+
+</LinearLayout>
