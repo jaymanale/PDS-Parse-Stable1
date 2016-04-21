@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:1:1-45:12
+ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:1:1-49:12
 	package
 		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:2:5-39
 		INJECTED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml
@@ -30,7 +30,7 @@ ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\ap
 	android:name
 		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:10:22-64
 application
-ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:12:5-43:19
+ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:12:5-47:19
 	android:label
 		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:16:9-41
 	android:allowBackup
@@ -75,9 +75,15 @@ ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\ap
 		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:37:13-64
 	android:name
 		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:36:13-79
-activity#com.teamtreehouse.parseworkshop.AddLinkActivity
+activity#com.teamtreehouse.parseworkshop.Dashboard
 ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:39:9-42:20
 	android:label
-		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:41:13-60
+		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:41:13-47
 	android:name
-		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:40:13-75
+		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:40:13-69
+activity#com.teamtreehouse.parseworkshop.AddLinkActivity
+ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:43:9-46:20
+	android:label
+		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:45:13-60
+	android:name
+		ADDED from C:\Users\Jay\Desktop\PDS Github\Safe Code Sample\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:44:13-75

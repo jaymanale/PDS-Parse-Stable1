@@ -1,6 +1,6 @@
 package com.teamtreehouse.parseworkshop;
 
-import android.app.ListActivity;
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
 
-public class MainFeedActivity extends ListActivity {
+public class MainFeedActivity extends Activity {
 
 	public static final String TAG = MainFeedActivity.class.getSimpleName();
 
@@ -75,7 +75,7 @@ public class MainFeedActivity extends ListActivity {
 //		intent.setData(Uri.parse(urlLabel.getText().toString()));
 //		startActivity(intent);
 //	}
-
+//
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		MenuInflater inflater = getMenuInflater();
@@ -89,7 +89,12 @@ public class MainFeedActivity extends ListActivity {
 		case R.id.addButton:
 			startActivity(new Intent(this, AddLinkActivity.class));
 			return true;
-		case R.id.followButton:
+            case R.id.refreshButton:
+                startActivity(new Intent(this, Dashboard.class));
+                return true;
+
+
+            case R.id.followButton:
 			startActivity(new Intent(this, SelectUsersActivity.class));
 			return true;
 		case R.id.logoutButton:

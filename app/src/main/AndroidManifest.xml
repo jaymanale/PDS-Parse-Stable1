@@ -37,6 +37,10 @@
             android:label="@string/title_activity_select_users" >
         </activity>
         <activity
+            android:name="com.teamtreehouse.parseworkshop.Dashboard"
+            android:label="@string/vendordash" >
+        </activity>
+        <activity
             android:name="com.teamtreehouse.parseworkshop.AddLinkActivity"
             android:label="@string/title_activity_add_link" >
         </activity>

@@ -11,14 +11,7 @@
                     "endOffset": 102
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 13,
-                        "startColumn": 4,
-                        "startOffset": 671,
-                        "endColumn": 51,
-                        "endOffset": 718
-                    }
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -26,8 +19,8 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 107,
-                    "endColumn": 44,
-                    "endOffset": 147
+                    "endColumn": 50,
+                    "endOffset": 153
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -37,9 +30,9 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 152,
-                    "endColumn": 45,
-                    "endOffset": 193
+                    "startOffset": 158,
+                    "endColumn": 40,
+                    "endOffset": 194
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -49,28 +42,21 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 198,
-                    "endColumn": 48,
-                    "endOffset": 242
+                    "startOffset": 199,
+                    "endColumn": 45,
+                    "endOffset": 240
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 12,
-                        "startColumn": 4,
-                        "startOffset": 621,
-                        "endColumn": 48,
-                        "endOffset": 665
-                    }
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
                 "to": {
                     "startLine": 6,
                     "startColumn": 4,
-                    "startOffset": 247,
+                    "startOffset": 245,
                     "endColumn": 52,
-                    "endOffset": 295
+                    "endOffset": 293
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -80,9 +66,9 @@
                 "to": {
                     "startLine": 7,
                     "startColumn": 4,
-                    "startOffset": 300,
-                    "endColumn": 51,
-                    "endOffset": 347
+                    "startOffset": 298,
+                    "endColumn": 40,
+                    "endOffset": 334
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -92,9 +78,9 @@
                 "to": {
                     "startLine": 8,
                     "startColumn": 4,
-                    "startOffset": 352,
+                    "startOffset": 339,
                     "endColumn": 62,
-                    "endOffset": 410
+                    "endOffset": 397
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -104,9 +90,9 @@
                 "to": {
                     "startLine": 9,
                     "startColumn": 4,
-                    "startOffset": 415,
+                    "startOffset": 402,
                     "endColumn": 60,
-                    "endOffset": 471
+                    "endOffset": 458
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -116,9 +102,9 @@
                 "to": {
                     "startLine": 10,
                     "startColumn": 4,
-                    "startOffset": 476,
+                    "startOffset": 463,
                     "endColumn": 51,
-                    "endOffset": 523
+                    "endOffset": 510
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -128,9 +114,9 @@
                 "to": {
                     "startLine": 11,
                     "startColumn": 4,
-                    "startOffset": 528,
+                    "startOffset": 515,
                     "endColumn": 53,
-                    "endOffset": 577
+                    "endOffset": 564
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -140,9 +126,9 @@
                 "to": {
                     "startLine": 12,
                     "startColumn": 4,
-                    "startOffset": 582,
+                    "startOffset": 569,
                     "endColumn": 50,
-                    "endOffset": 628
+                    "endOffset": 615
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -152,9 +138,9 @@
                 "to": {
                     "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 633,
+                    "startOffset": 620,
                     "endColumn": 50,
-                    "endOffset": 679
+                    "endOffset": 666
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -164,9 +150,9 @@
                 "to": {
                     "startLine": 14,
                     "startColumn": 4,
-                    "startOffset": 684,
+                    "startOffset": 671,
                     "endColumn": 55,
-                    "endOffset": 735
+                    "endOffset": 722
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -176,21 +162,28 @@
                 "to": {
                     "startLine": 15,
                     "startColumn": 4,
-                    "startOffset": 740,
-                    "endColumn": 62,
-                    "endOffset": 798
+                    "startOffset": 727,
+                    "endColumn": 68,
+                    "endOffset": 791
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 8,
+                        "startColumn": 4,
+                        "startOffset": 371,
+                        "endColumn": 68,
+                        "endOffset": 435
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 16,
                     "startColumn": 4,
-                    "startOffset": 803,
+                    "startOffset": 796,
                     "endColumn": 62,
-                    "endOffset": 861
+                    "endOffset": 854
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -200,9 +193,9 @@
                 "to": {
                     "startLine": 17,
                     "startColumn": 4,
-                    "startOffset": 866,
+                    "startOffset": 859,
                     "endColumn": 76,
-                    "endOffset": 938
+                    "endOffset": 931
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
@@ -212,22 +205,48 @@
                 "to": {
                     "startLine": 18,
                     "startColumn": 4,
-                    "startOffset": 943,
-                    "endColumn": 68,
-                    "endOffset": 1007
+                    "startOffset": 936,
+                    "endColumn": 60,
+                    "endOffset": 992
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 7,
+                        "startColumn": 4,
+                        "startOffset": 309,
+                        "endColumn": 60,
+                        "endOffset": 365
+                    }
                 }
             },
             {
                 "to": {
                     "startLine": 19,
                     "startColumn": 4,
-                    "startOffset": 1012,
-                    "endLine": 25,
+                    "startOffset": 997,
+                    "endColumn": 48,
+                    "endOffset": 1041
+                },
+                "from": {
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 19,
+                        "startColumn": 4,
+                        "startOffset": 978,
+                        "endColumn": 48,
+                        "endOffset": 1022
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 20,
+                    "startColumn": 4,
+                    "startOffset": 1046,
+                    "endLine": 26,
                     "endColumn": 12,
-                    "endOffset": 1298
+                    "endOffset": 1332
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\styles.xml"
@@ -235,12 +254,12 @@
             },
             {
                 "to": {
-                    "startLine": 26,
+                    "startLine": 27,
                     "startColumn": 4,
-                    "startOffset": 1303,
-                    "endLine": 28,
+                    "startOffset": 1337,
+                    "endLine": 29,
                     "endColumn": 12,
-                    "endOffset": 1458
+                    "endOffset": 1492
                 },
                 "from": {
                     "file": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\styles.xml"

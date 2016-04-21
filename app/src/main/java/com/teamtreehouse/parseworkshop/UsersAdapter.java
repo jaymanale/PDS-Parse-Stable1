@@ -1,11 +1,5 @@
 package com.teamtreehouse.parseworkshop;
 
-import java.io.UnsupportedEncodingException;
-import java.math.BigInteger;
-import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
-import java.util.ArrayList;
-
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -20,6 +14,12 @@ import com.parse.ParseObject;
 import com.parse.ParseRelation;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
+
+import java.io.UnsupportedEncodingException;
+import java.math.BigInteger;
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+import java.util.ArrayList;
 
 
 public class UsersAdapter extends ArrayAdapter<ParseObject> {
@@ -49,9 +49,9 @@ public class UsersAdapter extends ArrayAdapter<ParseObject> {
 			convertView = mInflater.inflate(R.layout.user_list_item, null);
       
 			holder = new ViewHolder();                
-			holder.emailLabel = (TextView) convertView.findViewById(R.id.emailLabel);               
-			holder.thumbnail = (SmartImageView) convertView.findViewById(R.id.userImage);
-			holder.checkbox = (CheckBox) convertView.findViewById(R.id.checkbox);
+//			holder.emailLabel = (TextView) convertView.findViewById(R.id.emailLabel);
+//			holder.thumbnail = (SmartImageView) convertView.findViewById(R.id.userImage);
+//			holder.checkbox = (CheckBox) convertView.findViewById(R.id.checkbox);
 			convertView.setTag(holder);
 		}
 		else {                

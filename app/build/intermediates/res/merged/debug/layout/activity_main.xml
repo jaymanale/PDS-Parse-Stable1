@@ -2,19 +2,46 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent" >
 
-	<ListView
-    	android:id="@android:id/list"
-    	android:layout_width="match_parent"
-    	android:layout_height="match_parent"
-    	android:layout_alignParentTop="true"
-    	android:layout_alignParentLeft="true" />
-    
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyleLarge"
-        android:layout_width="wrap_content"
+
+
+
+	<!--<ListView-->
+    	<!--android:id="@android:id/list"-->
+    	<!--android:layout_width="match_parent"-->
+    	<!--android:layout_height="match_parent"-->
+    	<!--android:layout_alignParentTop="true"-->
+    	<!--android:layout_alignParentLeft="true" />-->
+
+    <!--<ProgressBar-->
+        <!--android:id="@+id/progressBar1"-->
+        <!--style="?android:attr/progressBarStyleLarge"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:visibility="invisible" />-->
+
+    <EditText
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible" />
+        android:id="@+id/editText"
+        android:hint="Enter Phone Number"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:minLines="10" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Submit"
+        android:id="@+id/button"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>

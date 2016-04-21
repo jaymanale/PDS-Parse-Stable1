@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout\\activity_authenticate.xml"
     },
     {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\dashboard.xml",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout\\dashboard.xml"
+    },
+    {
         "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_main.xml",
         "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout\\activity_main.xml"
     },

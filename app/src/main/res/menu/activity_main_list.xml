@@ -10,12 +10,12 @@
         android:id="@+id/refreshButton"
         android:showAsAction="ifRoom"
         android:icon="@drawable/ic_action_refresh"
-        android:title="@string/ab_refresh" />
+        android:title="@string/ab_dashboard" />
 
     <item
         android:id="@+id/followButton"
         android:showAsAction="ifRoom"
-        android:title="@string/ab_follow" />
+        android:title="@string/ab_help" />
     
     <item
         android:id="@+id/logoutButton"
