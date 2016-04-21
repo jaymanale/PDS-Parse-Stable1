@@ -18,7 +18,7 @@ public final class R {
     }
     public static final class id {
         public static final int action_settings=0x7f070012;
-        public static final int addButton=0x7f07000f;
+        public static final int addButton=0x7f07000e;
         public static final int button1=0x7f070006;
         public static final int button2=0x7f070009;
         public static final int checkbox=0x7f07000b;
@@ -34,7 +34,7 @@ public final class R {
         public static final int logoutButton=0x7f070011;
         public static final int menu_settings=0x7f07000d;
         public static final int progressBar1=0x7f070007;
-        public static final int refreshButton=0x7f07000e;
+        public static final int refreshButton=0x7f07000f;
         public static final int userImage=0x7f07000a;
     }
     public static final class layout {

@@ -2,28 +2,14 @@ package com.teamtreehouse.parseworkshop;
 
 import android.app.ListActivity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.ListView;
 import android.widget.ProgressBar;
-import android.widget.SimpleAdapter;
-import android.widget.TextView;
 
-import com.parse.FindCallback;
-import com.parse.ParseException;
-import com.parse.ParseObject;
-import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
-
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
 
 public class MainFeedActivity extends ListActivity {
 
@@ -36,59 +22,59 @@ public class MainFeedActivity extends ListActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 
-		mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
+//		mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
 	}
 
-	@Override
-	public void onResume() {
-		super.onResume();
-		getLatestPosts();
-	}
-
-	protected void getLatestPosts() {
-		mProgressBar.setVisibility(View.VISIBLE);
-
-		/*
-		 * Use ParseQuery to get latest posts
-		 */
-		ParseQuery query = new ParseQuery(AddLinkActivity.POSTS);
-		query.setLimit(100);
-		query.orderByDescending("createAt");
-		query.findInBackground(new FindCallback() {
-			public void done(List<ParseObject> results, ParseException e) {
-				mProgressBar.setVisibility(View.INVISIBLE);
-
-				if (e == null) {
-					ArrayList<HashMap<String, String>> articles = new ArrayList<HashMap<String, String>>();
-					for (ParseObject result : results) {
-						HashMap<String, String> article = new HashMap<String, String>();
-						article.put(AddLinkActivity.firstName,
-								result.getString(AddLinkActivity.firstName));
-						article.put(AddLinkActivity.lastName,
-								result.getString(AddLinkActivity.lastName));
-						articles.add(article);
-					}
-					SimpleAdapter adapter = new SimpleAdapter(
-							MainFeedActivity.this, articles,
-							android.R.layout.simple_list_item_2, new String[] {
-									AddLinkActivity.firstName,
-									AddLinkActivity.lastName }, new int[] {
-									android.R.id.text1, android.R.id.text2 });
-					setListAdapter(adapter);
-				} else {
-					Log.e(TAG, "Exception caught!", e);
-				}
-			}
-		});
-	}
-
-	@Override
-	protected void onListItemClick(ListView l, View v, int position, long id) {
-		TextView urlLabel = (TextView) v.findViewById(android.R.id.text2);
-		Intent intent = new Intent(Intent.ACTION_VIEW);
-		intent.setData(Uri.parse(urlLabel.getText().toString()));
-		startActivity(intent);
-	}
+//	@Override
+//	public void onResume() {
+//		super.onResume();
+//		getLatestPosts();
+//	}
+//
+//	protected void getLatestPosts() {
+//		mProgressBar.setVisibility(View.VISIBLE);
+//
+//		/*
+//		 * Use ParseQuery to get latest posts
+//		 */
+//		ParseQuery query = new ParseQuery(AddLinkActivity.POSTS);
+//		query.setLimit(100);
+//		query.orderByDescending("createAt");
+//		query.findInBackground(new FindCallback() {
+//			public void done(List<ParseObject> results, ParseException e) {
+//				mProgressBar.setVisibility(View.INVISIBLE);
+//
+//				if (e == null) {
+//					ArrayList<HashMap<String, String>> articles = new ArrayList<HashMap<String, String>>();
+//					for (ParseObject result : results) {
+//						HashMap<String, String> article = new HashMap<String, String>();
+//						article.put(AddLinkActivity.firstName,
+//								result.getString(AddLinkActivity.firstName));
+//						article.put(AddLinkActivity.lastName,
+//								result.getString(AddLinkActivity.lastName));
+//						articles.add(article);
+//					}
+//					SimpleAdapter adapter = new SimpleAdapter(
+//							MainFeedActivity.this, articles,
+//							android.R.layout.simple_list_item_2, new String[] {
+//									AddLinkActivity.firstName,
+//									AddLinkActivity.lastName }, new int[] {
+//									android.R.id.text1, android.R.id.text2 });
+//					setListAdapter(adapter);
+//				} else {
+//					Log.e(TAG, "Exception caught!", e);
+//				}
+//			}
+//		});
+//	}
+//
+//	@Override
+//	protected void onListItemClick(ListView l, View v, int position, long id) {
+//		TextView urlLabel = (TextView) v.findViewById(android.R.id.text2);
+//		Intent intent = new Intent(Intent.ACTION_VIEW);
+//		intent.setData(Uri.parse(urlLabel.getText().toString()));
+//		startActivity(intent);
+//	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {

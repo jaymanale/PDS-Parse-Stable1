@@ -10,8 +10,8 @@
     <string name="loginButtonLabel">Log In</string>
     <string name="password_hint">password</string>
     <string name="email_address_hint">email address</string>
-    <string name="ab_refresh">Refresh</string>
-    <string name="ab_add">Add</string>
+    <string name="ab_refresh">Dashboard</string>
+    <string name="ab_add">Add New Customer</string>
     <string name="ab_follow">Follow</string>
     <string name="ab_logout">Log Out</string>
     <string name="signup_button_label">Sign Up</string>

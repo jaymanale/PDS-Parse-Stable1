@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="ab_add">Add</string>
+    <string name="ab_add">Add New Customer</string>
     <string name="ab_follow">Follow</string>
     <string name="ab_logout">Log Out</string>
-    <string name="ab_refresh">Refresh</string>
+    <string name="ab_refresh">Dashboard</string>
     <string name="action_settings">Settings</string>
     <string name="app_name">Parse Workshop</string>
     <string name="desc_treehouse_logo">Treehouse Logo</string>

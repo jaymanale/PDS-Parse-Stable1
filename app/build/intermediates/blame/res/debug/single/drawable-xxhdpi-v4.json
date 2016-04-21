@@ -1,5 +1,9 @@
 [
     {
+        "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
+        "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\Safe Code Sample\\PDS-Parse-Stable1\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
+    },
+    {
         "merged": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4\\ic_launcher.png",
         "source": "C:\\Users\\Jay\\Desktop\\PDS Github\\TreehouseParseWorkshop_FINALGithub\\app\\src\\main\\res\\drawable-xxhdpi\\ic_launcher.png"
     }
