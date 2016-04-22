@@ -15,7 +15,7 @@
     <item
         android:id="@+id/followButton"
         android:showAsAction="ifRoom"
-        android:title="@string/ab_help" />
+        android:title="Help" />
     
     <item
         android:id="@+id/logoutButton"

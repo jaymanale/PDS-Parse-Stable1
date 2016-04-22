@@ -18,5 +18,6 @@
     <string name="login_button_label">Log In</string>
     <string name="desc_treehouse_logo">Treehouse Logo</string>
     <string name="vendordash">Dashboard</string>
+    <string name="user_information">User information</string>
 
 </resources>

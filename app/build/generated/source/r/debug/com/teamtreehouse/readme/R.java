@@ -17,8 +17,8 @@ public final class R {
         public static final int treehouse_logo=0x7f020003;
     }
     public static final class id {
-        public static final int action_settings=0x7f070011;
-        public static final int addButton=0x7f07000d;
+        public static final int action_settings=0x7f07001d;
+        public static final int addButton=0x7f070019;
         public static final int button=0x7f07000b;
         public static final int button1=0x7f070006;
         public static final int button2=0x7f070009;
@@ -29,12 +29,24 @@ public final class R {
         public static final int editText4=0x7f070003;
         public static final int editText5=0x7f070004;
         public static final int editText6=0x7f070005;
-        public static final int followButton=0x7f07000f;
+        public static final int followButton=0x7f07001b;
         public static final int logo=0x7f070008;
-        public static final int logoutButton=0x7f070010;
-        public static final int menu_settings=0x7f07000c;
+        public static final int logoutButton=0x7f07001c;
+        public static final int menu_settings=0x7f070018;
         public static final int progressBar1=0x7f070007;
-        public static final int refreshButton=0x7f07000e;
+        public static final int refreshButton=0x7f07001a;
+        public static final int textView=0x7f07000c;
+        public static final int textView10=0x7f070015;
+        public static final int textView11=0x7f070016;
+        public static final int textView12=0x7f070017;
+        public static final int textView2=0x7f07000d;
+        public static final int textView3=0x7f07000e;
+        public static final int textView4=0x7f07000f;
+        public static final int textView5=0x7f070010;
+        public static final int textView6=0x7f070011;
+        public static final int textView7=0x7f070012;
+        public static final int textView8=0x7f070013;
+        public static final int textView9=0x7f070014;
     }
     public static final class layout {
         public static final int activity_add_link=0x7f030000;
@@ -43,7 +55,8 @@ public final class R {
         public static final int activity_main=0x7f030003;
         public static final int activity_select_users=0x7f030004;
         public static final int dashboard=0x7f030005;
-        public static final int user_list_item=0x7f030006;
+        public static final int retrieve_data=0x7f030006;
+        public static final int user_list_item=0x7f030007;
     }
     public static final class menu {
         public static final int activity_authenticate=0x7f060000;
@@ -69,7 +82,8 @@ public final class R {
         public static final int title_activity_authenticate=0x7f05000e;
         public static final int title_activity_login_or_signup=0x7f05000f;
         public static final int title_activity_select_users=0x7f050010;
-        public static final int vendordash=0x7f050011;
+        public static final int user_information=0x7f050011;
+        public static final int vendordash=0x7f050012;
     }
     public static final class style {
         /**  API 11 theme customizations can go here. 

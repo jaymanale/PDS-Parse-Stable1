@@ -17,6 +17,7 @@
     <string name="title_activity_authenticate">Log In</string>
     <string name="title_activity_login_or_signup">Log In or Sign Up</string>
     <string name="title_activity_select_users">Help</string>
+    <string name="user_information">User information</string>
     <string name="vendordash">Dashboard</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--

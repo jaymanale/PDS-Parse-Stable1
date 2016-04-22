@@ -44,6 +44,10 @@
             android:name="com.teamtreehouse.parseworkshop.AddLinkActivity"
             android:label="@string/title_activity_add_link" >
         </activity>
+        <activity
+            android:name="com.teamtreehouse.parseworkshop.Retrieve_data"
+            android:label="@string/user_information" >
+        </activity>
     </application>
 
 </manifest>
