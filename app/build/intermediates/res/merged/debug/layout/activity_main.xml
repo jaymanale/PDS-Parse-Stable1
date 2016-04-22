@@ -31,8 +31,7 @@
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true"
         android:inputType="phone"
-        android:maxLength="10"
-        android:minLines="10" />
+        android:maxLength="10" />
 
     <Button
         android:layout_width="match_parent"
