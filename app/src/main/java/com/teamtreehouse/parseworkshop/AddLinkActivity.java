@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.parse.ParseObject;
 import com.teamtreehouse.readme.R;
@@ -15,6 +16,7 @@ public class AddLinkActivity extends Activity {
 	public static final String lastName = "Last_name";
 	public static final String cardNo = "CardNo";
 	public static final String cardType = "CardType";
+//	public static final String familyMember ="FamilyMember";
 	public static final String mobile = "MobileNo";
 	public static final String personAddress = "Address";
 
@@ -27,6 +29,7 @@ public class AddLinkActivity extends Activity {
 	protected EditText mlastname;
 	protected EditText mcardno;
 	protected EditText mcardtype;
+    protected EditText mfamilymember;
 	protected EditText mmobileno;
 	protected EditText maddress;
 
@@ -43,6 +46,7 @@ public class AddLinkActivity extends Activity {
 		mlastname = (EditText) findViewById(R.id.editText2);
 		mcardno = (EditText) findViewById(R.id.editText3);
 		mcardtype = (EditText) findViewById(R.id.editText4);
+//        mfamilymember = (EditText)findViewById(R.id.editText31);
 		mmobileno = (EditText) findViewById(R.id.editText5);
 		maddress = (EditText) findViewById(R.id.editText6);
 		mSaveButton = (Button) findViewById(R.id.button1);
@@ -54,8 +58,11 @@ public class AddLinkActivity extends Activity {
 				String lname = mlastname.getText().toString();
 				String cno = mcardno.getText().toString();
 				String ctype = mcardtype.getText().toString();
-				String mno = mmobileno.getText().toString();
+//                String fmember=mfamilymember.getText().toString();
+                String mno = mmobileno.getText().toString();
 				String addrs = maddress.getText().toString();
+
+
 
 				if (!fname.equals("")) {
 					/*
@@ -66,12 +73,18 @@ public class AddLinkActivity extends Activity {
 					post.put(lastName, lname);
 					post.put(cardNo, cno);
 					post.put(cardType, ctype);
+//                    post.put(familyMember,fmember);
 					post.put(mobile, mno);
 					post.put(personAddress, addrs);
 					post.saveInBackground();
 
 					finish();
 				}
+                else{
+                    Toast.makeText(AddLinkActivity.this,
+                            "All fields are Mandatory...",
+                            Toast.LENGTH_LONG).show();
+                }
 			}
 		});
 	}

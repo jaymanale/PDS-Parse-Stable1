@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Allocated Quantity"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:id="@+id/textView13" />
+
+    <GridLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:columnCount="2"
+        android:rowCount="19"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:id="@+id/gridLayout">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wheat"
+        android:layout_gravity="left|top"
+        android:layout_marginRight="160dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:textSize="21sp"
+        android:id="@+id/wheat" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="21sp"
+        android:layout_gravity="left|top"
+        android:id="@+id/wheatQuantity" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rice"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="160dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/rice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/riceQuantity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wheat"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="160dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/sugar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/sugarQuantity" />
+    </GridLayout>
+</LinearLayout>

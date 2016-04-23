@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
@@ -8,12 +8,12 @@
 
     <GridLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="428dp"
         android:columnCount="2"
-        android:rowCount="6"
+        android:rowCount="19"
         android:orientation="horizontal"
         android:padding="10dp"
-        >
+        android:id="@+id/gridLayout">
 
         <TextView
             android:layout_width="wrap_content"
@@ -113,6 +113,23 @@
             android:id="@+id/textView12" />
 
 
+
+
     </GridLayout>
 
-</LinearLayout>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Allocation &amp; Fair"
+        android:id="@+id/button2"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="10dp"
+        android:background="#176CEC"
+        android:textColor="#fff"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        />
+
+
+</RelativeLayout>

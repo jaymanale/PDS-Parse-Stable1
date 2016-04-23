@@ -33,7 +33,7 @@
         android:inputType="phone"
         android:layout_marginTop="1dp"
         android:padding="14dp"
-        android:maxLength="10" />
+        android:maxLength="6" />
 
     <Button
         android:layout_width="match_parent"

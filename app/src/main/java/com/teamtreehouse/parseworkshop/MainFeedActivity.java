@@ -187,7 +187,7 @@ public class MainFeedActivity extends Activity {
 			 * Log current user out using ParseUser.logOut()
 			 */
                         ParseUser.logOut();
-                        Intent intent = new Intent(this, LoginOrSignupActivity.class);
+                        Intent intent = new Intent(this, AuthenticateActivity.class);
                         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
                         return true;
