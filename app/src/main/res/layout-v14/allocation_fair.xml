@@ -1,4 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,7 +12,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Allocated Quantity"
+        android:text="Quantity"
         android:textSize="25sp"
         android:layout_gravity="center"
         android:id="@+id/textView13" />
@@ -59,7 +64,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Wheat"
+            android:text="Sugar"
             android:layout_gravity="left|top"
             android:layout_marginRight="160dp"
             android:layout_marginLeft="40dp"
@@ -73,5 +78,96 @@
             android:textSize="21sp"
             android:layout_gravity="left|top"
             android:id="@+id/sugarQuantity" />
+
     </GridLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fair"
+        android:textSize="25sp"
+        android:layout_gravity="center"
+        android:id="@+id/textView14" />
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:columnCount="2"
+        android:rowCount="4"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wheat"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="140dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/FairWheat" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/FairWheatQuantity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rice"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="140dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/FairRice" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/FairRiceQuantity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sugar"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="140dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/FairSugar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/FairSugarQuantity" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Fair"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="140dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/totalCost" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/totalCost1" />
+
+    </GridLayout>
+
+
 </LinearLayout>
+    </ScrollView>

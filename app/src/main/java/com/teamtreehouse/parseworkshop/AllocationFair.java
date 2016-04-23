@@ -11,7 +11,7 @@ import com.parse.ParseQuery;
 import com.teamtreehouse.readme.R;
 
 public class AllocationFair extends Activity {
-TextView getWheat,getRice,getSugar;
+TextView getWheat,getRice,getSugar,getWheatFair,getRiceFair,getSugarFair,costView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +24,11 @@ TextView getWheat,getRice,getSugar;
         getWheat=(TextView)findViewById(R.id.wheatQuantity);
         getRice=(TextView)findViewById(R.id.riceQuantity);
         getSugar=(TextView)findViewById(R.id.sugarQuantity);
+        getWheatFair=(TextView)findViewById(R.id.FairWheatQuantity);
+        getRiceFair=(TextView)findViewById(R.id.FairRiceQuantity);
+        getSugarFair=(TextView)findViewById(R.id.FairSugarQuantity);
+        costView=(TextView)findViewById(R.id.totalCost1);
+
                         final ParseQuery query = new ParseQuery("Allocation");
                         query.getInBackground("dy3keagcCC", new GetCallback() {
                             @Override
@@ -33,11 +38,22 @@ TextView getWheat,getRice,getSugar;
                                     int recWheat=parseObject.getInt("Wheat");
                                     int recRice=parseObject.getInt("Rice");
                                     int recSugar=parseObject.getInt("Sugar");
+                                    int recWheatFair=parseObject.getInt("WheatFair");
+                                    int recRiceFair=parseObject.getInt("RiceFair");
+                                    int recSugarFair=parseObject.getInt("SugarFair");
 
 
                                     getWheat.setText(recWheat +" Kg");
                                     getRice.setText(recRice +" Kg");
                                     getSugar.setText(recSugar +" Kg");
+                                    getWheatFair.setText(recWheatFair + "/Kg");
+                                    getRiceFair.setText(recRiceFair + "/Kg");
+                                    getSugarFair.setText(recSugarFair + "/Kg");
+
+                                    int costToPay=((recWheat*recWheatFair)+(recRice*recRiceFair)+(recSugar*recSugarFair));
+                                    costView.setText(costToPay +"Rs");
+
+
                                 }
                             }
                         });
