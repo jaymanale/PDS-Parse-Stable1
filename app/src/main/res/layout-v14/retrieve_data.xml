@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+
+    >
 
 
 
@@ -13,6 +15,8 @@
         android:rowCount="19"
         android:orientation="horizontal"
         android:padding="10dp"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"
         android:id="@+id/gridLayout">
 
         <TextView
@@ -31,6 +35,8 @@
             android:textSize="21sp"
             android:layout_gravity="left|top"
             android:id="@+id/textView2" />
+
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -47,7 +53,7 @@
             android:textSize="21sp"
             android:layout_gravity="left|top"
             android:id="@+id/textView4" />
-        <TextView
+       <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Card Number"

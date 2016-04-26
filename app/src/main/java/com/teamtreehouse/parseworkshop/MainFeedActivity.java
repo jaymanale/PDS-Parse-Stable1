@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.parse.FindCallback;
@@ -24,7 +25,7 @@ public class MainFeedActivity extends Activity {
 
 //	public static final String TAG = MainFeedActivity.class.getSimpleName();
 //
-//	protected ProgressBar mProgressBar;
+	protected ProgressBar mProgressBar;
     Button submit;
     EditText usercardno;
     int cardNo;
@@ -33,12 +34,13 @@ public class MainFeedActivity extends Activity {
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+        mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
         init();
 
 
 
 
-//		mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
+
 	}
 
     private void init()
@@ -55,6 +57,7 @@ public class MainFeedActivity extends Activity {
 
             @Override
             public void onClick(View view) {
+                mProgressBar.setVisibility(View.VISIBLE);
 
 
                 final ParseQuery query = new ParseQuery("Customer");
