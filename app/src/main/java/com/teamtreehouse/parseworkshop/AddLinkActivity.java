@@ -64,7 +64,7 @@ public class AddLinkActivity extends Activity {
 
 
 
-				if (!fname.equals("")) {
+				if (!fname.equals("") && !lname.equals("") && !cno.equals("") && !ctype.equals("") && !mno.equals("") && !addrs.equals("")) {
 					/*
 					 * Save Post ParseObject
 					 */

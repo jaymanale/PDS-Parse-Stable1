@@ -45,8 +45,13 @@ public class MainFeedActivity extends Activity {
 
     private void init()
 {
+//    int min = 100000;
+//    int max = 999999;
+//    Random r=new Random();
+//    final int  ranNumber=r.nextInt(max - min + 1) + min;
 
-        usercardno=(EditText)findViewById(R.id.editText);
+
+    usercardno=(EditText)findViewById(R.id.editText);
         submit=(Button)findViewById(R.id.button);
 
 
@@ -67,8 +72,11 @@ public class MainFeedActivity extends Activity {
                         query.findInBackground(new FindCallback() {
                             @Override
                             public void done(List<ParseObject> list, ParseException e) {
+                                mProgressBar.setVisibility(View.INVISIBLE);
                                 if (e == null) {
                                     if(list.size()>0) {
+
+                                        //code for sms
 
                                         String recFname = list.get(0).getString("First_Name");
                                         String recLname = list.get(0).getString("Last_name");
@@ -76,6 +84,14 @@ public class MainFeedActivity extends Activity {
                                         String recCardtype=list.get(0).getString("CardType");
                                         String recMobileno=list.get(0).getString("MobileNo");
                                         String recAddress=list.get(0).getString("Address");
+
+//                                        String message="Your OTP: "+ranNumber + "Please Enter it in App.";
+//                                        SMS smsClient=new SMS();
+//                                        smsClient.send("9552036202", "jr2594", recMobileno, message, "");
+//
+
+
+
 
 
 //                                    String name = pds.getString("First_Name");
