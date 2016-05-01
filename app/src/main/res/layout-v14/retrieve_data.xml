@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
     >
-
 
 
 
@@ -88,6 +88,22 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:text="Family Member"
+            android:layout_gravity="left|top"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="20dp"
+            android:textSize="21sp"
+            android:id="@+id/fmember" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="21sp"
+            android:layout_gravity="left|top"
+            android:id="@+id/fmemberview" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:text="Mobile Number"
             android:layout_gravity="left|top"
             android:layout_marginRight="40dp"
@@ -115,6 +131,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textSize="21sp"
+            android:gravity="center_horizontal"
             android:layout_gravity="left|top"
             android:id="@+id/textView12" />
 
@@ -135,7 +152,16 @@
         android:textColor="#fff"
         android:textStyle="bold"
         android:textSize="20sp"
+
         />
 
+    <ProgressBar
+        android:id="@+id/progressBar1"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>

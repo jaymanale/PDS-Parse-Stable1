@@ -53,22 +53,22 @@
         android:ems="10"
         android:hint="Card type"
         android:layout_marginTop="1dp"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:padding="14dp"
-        android:maxLength="1"
-        android:inputType="textCapCharacters" />
-    <!--<EditText-->
-        <!--android:id="@+id/editText31"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:ems="10"-->
-        <!--android:hint="Family Member"-->
-        <!--android:layout_marginTop="1dp"-->
-        <!--android:padding="14dp"-->
-        <!--android:inputType="number"-->
-         <!--/>-->
+        android:maxLength="6"
+        />
+    <EditText
+        android:id="@+id/editText31"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:digits="0123456789"
+        android:hint="Family Member"
+        android:layout_marginTop="1dp"
+        android:padding="14dp"
+        android:inputType="number"
+         />
 
-    <!--android:gravity="top|left"-->
 
     <EditText
         android:id="@+id/editText5"
@@ -87,7 +87,7 @@
         android:layout_height="wrap_content"
         android:hint="Address"
         android:ems="10"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/,"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/, "
         android:inputType="textPostalAddress"
         android:layout_marginTop="1dp"
         android:padding="14dp"/>

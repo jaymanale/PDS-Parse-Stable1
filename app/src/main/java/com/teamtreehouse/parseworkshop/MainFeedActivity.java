@@ -82,6 +82,7 @@ public class MainFeedActivity extends Activity {
                                         String recLname = list.get(0).getString("Last_name");
                                         String recCardno = list.get(0).getString("CardNo");
                                         String recCardtype=list.get(0).getString("CardType");
+                                        String recFmember=list.get(0).getString("FamilyMember");
                                         String recMobileno=list.get(0).getString("MobileNo");
                                         String recAddress=list.get(0).getString("Address");
 
@@ -96,14 +97,18 @@ public class MainFeedActivity extends Activity {
 
 //                                    String name = pds.getString("First_Name");
                                         Intent submitbtn = new Intent(MainFeedActivity.this, Retrieve_data.class);
+//                                        Intent check=new Intent(MainFeedActivity.this,AllocationFair.class);
                                         submitbtn.putExtra("fName", recFname);
                                         submitbtn.putExtra("lName", recLname);
                                         submitbtn.putExtra("cardNumber",recCardno);
                                         submitbtn.putExtra("cardType",recCardtype);
+                                        submitbtn.putExtra("fmember",recFmember);
                                         submitbtn.putExtra("mobileNo",recMobileno);
                                         submitbtn.putExtra("address",recAddress);
 
                                         startActivity(submitbtn);
+//                                        check.putExtra("CardTypeCheck",recCardtype);
+//                                        startActivity(check);
                                     }else{
                                         Toast.makeText(MainFeedActivity.this,
                                                 "Invalid Card Number",
