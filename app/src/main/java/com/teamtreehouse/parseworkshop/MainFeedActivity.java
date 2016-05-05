@@ -27,6 +27,10 @@ public class MainFeedActivity extends Activity {
 //
 	protected ProgressBar mProgressBar;
     Button submit;
+
+//    static MainFeedActivity INSTANCE;
+    String data,recCardtype,recFmember,recFname,recLname,recCardno,recMobileno,recAddress;
+
     EditText usercardno;
     int cardNo;
 
@@ -35,23 +39,8 @@ public class MainFeedActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
-        init();
-
-
-
-
-
-	}
-
-    private void init()
-{
-//    int min = 100000;
-//    int max = 999999;
-//    Random r=new Random();
-//    final int  ranNumber=r.nextInt(max - min + 1) + min;
-
-
-    usercardno=(EditText)findViewById(R.id.editText);
+//        init();
+        usercardno=(EditText)findViewById(R.id.editText);
         submit=(Button)findViewById(R.id.button);
 
 
@@ -74,17 +63,18 @@ public class MainFeedActivity extends Activity {
                             public void done(List<ParseObject> list, ParseException e) {
                                 mProgressBar.setVisibility(View.INVISIBLE);
                                 if (e == null) {
-                                    if(list.size()>0) {
+                                    if (list.size() > 0) {
 
                                         //code for sms
 
-                                        String recFname = list.get(0).getString("First_Name");
-                                        String recLname = list.get(0).getString("Last_name");
-                                        String recCardno = list.get(0).getString("CardNo");
-                                        String recCardtype=list.get(0).getString("CardType");
-                                        String recFmember=list.get(0).getString("FamilyMember");
-                                        String recMobileno=list.get(0).getString("MobileNo");
-                                        String recAddress=list.get(0).getString("Address");
+                                         recFname = list.get(0).getString("First_Name");
+                                         recLname = list.get(0).getString("Last_name");
+                                         recCardno = list.get(0).getString("CardNo");
+                                         recCardtype = list.get(0).getString("CardType");
+                                         recFmember = list.get(0).getString("FamilyMember");
+                                         recMobileno = list.get(0).getString("MobileNo");
+                                         recAddress = list.get(0).getString("Address");
+
 
 //                                        String message="Your OTP: "+ranNumber + "Please Enter it in App.";
 //                                        SMS smsClient=new SMS();
@@ -92,31 +82,26 @@ public class MainFeedActivity extends Activity {
 //
 
 
-
-
-
 //                                    String name = pds.getString("First_Name");
                                         Intent submitbtn = new Intent(MainFeedActivity.this, Retrieve_data.class);
 //                                        Intent check=new Intent(MainFeedActivity.this,AllocationFair.class);
                                         submitbtn.putExtra("fName", recFname);
                                         submitbtn.putExtra("lName", recLname);
-                                        submitbtn.putExtra("cardNumber",recCardno);
-                                        submitbtn.putExtra("cardType",recCardtype);
-                                        submitbtn.putExtra("fmember",recFmember);
-                                        submitbtn.putExtra("mobileNo",recMobileno);
-                                        submitbtn.putExtra("address",recAddress);
+                                        submitbtn.putExtra("cardNumber", recCardno);
+                                        submitbtn.putExtra("cardType", recCardtype);
+                                        submitbtn.putExtra("fmember", recFmember);
+                                        submitbtn.putExtra("mobileNo", recMobileno);
+                                        submitbtn.putExtra("address", recAddress);
 
                                         startActivity(submitbtn);
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
-                                    }else{
+                                    } else {
                                         Toast.makeText(MainFeedActivity.this,
                                                 "Invalid Card Number",
                                                 Toast.LENGTH_LONG).show();
                                     }
-                                }
-                                else
-                                {
+                                } else {
                                     Toast.makeText(MainFeedActivity.this,
                                             "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
@@ -124,17 +109,30 @@ public class MainFeedActivity extends Activity {
                         });
 
 
-
-
-
                     }
                 });
 
             }
         });
-}
 
-            //	@Override
+    }
+
+
+
+
+
+//    private void init()
+//{
+//    int min = 100000;
+//    int max = 999999;
+//    Random r=new Random();
+//    final int  ranNumber=r.nextInt(max - min + 1) + min;
+
+
+
+//}
+
+    //	@Override
 //	public void onResume() {
 //		super.onResume();
 //		getLatestPosts();

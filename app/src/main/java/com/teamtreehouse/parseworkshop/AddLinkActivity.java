@@ -61,6 +61,8 @@ public class AddLinkActivity extends Activity {
                 String fmember=mfamilymember.getText().toString();
                 String mno = mmobileno.getText().toString();
 				String addrs = maddress.getText().toString();
+				int cardNoLength=cno.length();
+				int mobileNoLength=mno.length();
 
 
 
@@ -68,20 +70,33 @@ public class AddLinkActivity extends Activity {
 					/*
 					 * Save Post ParseObject
 					 */
-					ParseObject post = new ParseObject(POSTS);
-					post.put(firstName, fname);
-					post.put(lastName, lname);
-					post.put(cardNo, cno);
-					post.put(cardType, ctype);
-                    post.put(familyMember,fmember);
-					post.put(mobile, mno);
-					post.put(personAddress, addrs);
-					post.saveInBackground();
+					if(cardNoLength==6 && mobileNoLength==10){
+						if(ctype.equals("ORANGE") || ctype.equals("YELLOW") || ctype.equals("WHITE")) {
 
-					finish();
-					Toast.makeText(AddLinkActivity.this,
-							"Successfully created new User. ",
-							Toast.LENGTH_LONG).show();
+							ParseObject post = new ParseObject(POSTS);
+							post.put(firstName, fname);
+							post.put(lastName, lname);
+							post.put(cardNo, cno);
+							post.put(cardType, ctype);
+							post.put(familyMember, fmember);
+							post.put(mobile, mno);
+							post.put(personAddress, addrs);
+							post.saveInBackground();
+
+							finish();
+							Toast.makeText(AddLinkActivity.this,
+									"Successfully created Customer Record. ",
+									Toast.LENGTH_LONG).show();
+						}else{
+							Toast.makeText(AddLinkActivity.this,
+									"Card Type Must be ORANGE/WHITE/YELLOW ...",
+									Toast.LENGTH_LONG).show();
+						}
+				}else{
+						Toast.makeText(AddLinkActivity.this,
+								"Wrong card No OR Wrong phone No...",
+								Toast.LENGTH_LONG).show();
+					}
 				}
                 else{
                     Toast.makeText(AddLinkActivity.this,
