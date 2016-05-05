@@ -8,10 +8,12 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.parse.ParseObject;
+import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
 
 public class AddLinkActivity extends Activity {
 	//defination od coloun in parse
+    public static final String shopNo = "ShopNo";
 	public static final String firstName = "First_Name";
 	public static final String lastName = "Last_name";
 	public static final String cardNo = "CardNo";
@@ -41,6 +43,8 @@ public class AddLinkActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_link);
+
+        final ParseUser currentUser = ParseUser.getCurrentUser();
 
 		mfirstname = (EditText) findViewById(R.id.editText1);
 		mlastname = (EditText) findViewById(R.id.editText2);
@@ -74,6 +78,7 @@ public class AddLinkActivity extends Activity {
 						if(ctype.equals("ORANGE") || ctype.equals("YELLOW") || ctype.equals("WHITE")) {
 
 							ParseObject post = new ParseObject(POSTS);
+                            post.put(shopNo,currentUser);
 							post.put(firstName, fname);
 							post.put(lastName, lname);
 							post.put(cardNo, cno);
