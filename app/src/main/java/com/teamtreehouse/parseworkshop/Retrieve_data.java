@@ -176,7 +176,7 @@ public class Retrieve_data extends Activity {
 
     TextView getfName, getlName, getCardno, getCardtype, getMobile, getAddress,getFamilyMember;
     Button getAllocation;
-    String reccType;
+    String reccType,recFmember;
 
 
     @Override
@@ -195,6 +195,7 @@ public class Retrieve_data extends Activity {
             public void onClick(View view) {
                 Intent allocation = new Intent(Retrieve_data.this, AllocationFair.class);
                 allocation.putExtra("ctype",reccType);
+                allocation.putExtra("fmember",recFmember);
                 startActivity(allocation);
 
             }
@@ -219,7 +220,7 @@ public class Retrieve_data extends Activity {
         String reclName = submitbtn.getStringExtra("lName");
         String reccName = submitbtn.getStringExtra("cardNumber");
          reccType = submitbtn.getStringExtra("cardType");
-        String recFmember=submitbtn.getStringExtra("fmember");
+         recFmember=submitbtn.getStringExtra("fmember");
         String recMobileno = submitbtn.getStringExtra("mobileNo");
         String recAddress = submitbtn.getStringExtra("address");
 

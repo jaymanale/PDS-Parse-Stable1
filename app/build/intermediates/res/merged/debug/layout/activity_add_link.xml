@@ -3,8 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".AddLinkActivity"
-    android:weightSum="1">
+    tools:context=".AddLinkActivity">
 
     <EditText
         android:id="@+id/editText1"
@@ -14,9 +13,9 @@
         android:padding="14dp"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:hint="First Name"
+        android:singleLine="true"
         android:ems="10"
-        android:inputType="textPersonName"
-        >
+        android:inputType="textPersonName">
 
         <requestFocus />
     </EditText>
@@ -26,12 +25,13 @@
         android:id="@+id/editText2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Last Name"
         android:ems="10"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:inputType="text"
+        android:hint="Last Name"
+        android:singleLine="true"
         android:layout_marginTop="1dp"
         android:padding="14dp"
+        android:inputType="text"
+        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         />
 
 
@@ -52,6 +52,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Card type"
+        android:singleLine="true"
         android:layout_marginTop="1dp"
         android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
         android:inputType="textCapCharacters"
@@ -65,6 +66,7 @@
         android:ems="10"
         android:digits="0123456789"
         android:hint="Family Member"
+        android:singleLine="true"
         android:layout_marginTop="1dp"
         android:padding="14dp"
         android:maxLength="2"
@@ -78,6 +80,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Mobile No"
+        android:singleLine="true"
         android:digits="0123456789"
         android:layout_marginTop="1dp"
         android:padding="14dp"
@@ -88,6 +91,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Address"
+        android:singleLine="true"
         android:ems="10"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/, "
         android:inputType="textPostalAddress"

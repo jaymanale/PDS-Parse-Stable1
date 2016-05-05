@@ -158,7 +158,7 @@ import java.util.List;
 
 public class AllocationFair extends Activity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
-    String cardTtpeCheck,cctype;
+    String fmember,cctype;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,7 +167,9 @@ public class AllocationFair extends Activity {
         final ParseObject gameScore = new ParseObject("Allocation");
         Intent submitbtn = getIntent();
          cctype=submitbtn.getStringExtra("ctype");
-        Toast.makeText(AllocationFair.this, "Data from first activity is:" + cctype, Toast.LENGTH_SHORT).show();
+        fmember=submitbtn.getStringExtra("fmember");
+
+        Toast.makeText(AllocationFair.this, "Card Type:" + cctype, Toast.LENGTH_SHORT).show();
 
 
         init();
@@ -212,20 +214,35 @@ public class AllocationFair extends Activity {
                     int wheatFairInt=Integer.parseInt(recWheatFair);
                     int riceFairInt=Integer.parseInt(recRiceFair);
                     int sugarFairInt=Integer.parseInt(recSugarFair);
+                    int mem=Integer.parseInt(fmember);
 
+            // getting total quantity
+                    int wheatTotal=wheatInt*mem;
+                    int riceTotal=riceInt*mem;
+                    int sugarTotal=sugarInt*mem;
 
+                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
+                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
+                    getSugar.setText(sugarInt + "*" + mem + "=" + sugarTotal + "Kg");
 
+                    //getting total fair
+                    int wheatFair=wheatFairInt*wheatTotal;
+                    int riceFair=riceFairInt*riceTotal;
+                    int sugarFair=sugarFairInt*sugarTotal;
 
+                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " +riceFair);
+                    getSugarFair.setText(sugarFairInt + "*" + sugarTotal + "= " + "Rs. " +sugarFair);
 
-                    getRice.setText(recRice + " Kg");
-                    getWheat.setText(recWheat + " Kg");
-                    getSugar.setText(recSugar + " Kg");
-                    getWheatFair.setText(recWheatFair + "/Kg");
-                    getRiceFair.setText(recRiceFair + "/Kg");
-                    getSugarFair.setText(recSugarFair + "/Kg");
+//                    getRice.setText(riceInt + "Kg" );
+//                    getSugar.setText(recSugar + " Kg");
+//                    getWheatFair.setText(recWheatFair + "/Kg");
+//                    getRiceFair.setText(recRiceFair + "/Kg");
+//                    getSugarFair.setText(recSugarFair + "/Kg");
 
-                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                    costView.setText(costToPay + "Rs");
+//                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
+                    int costToPay=wheatFair+riceFair+sugarFair;
+                   costView.setText("Rs. " +costToPay);
 
 
 
