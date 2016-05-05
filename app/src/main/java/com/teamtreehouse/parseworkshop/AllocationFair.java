@@ -170,17 +170,6 @@ public class AllocationFair extends Activity {
         fmember=submitbtn.getStringExtra("fmember");
 
         Toast.makeText(AllocationFair.this, "Card Type:" + cctype, Toast.LENGTH_SHORT).show();
-
-
-        init();
-
-//        cardTtpeCheck=Retrieve_data.getActivityInstance().getData();
-//
-//        Toast.makeText(AllocationFair.this, "Data from first activity is:" + cardTtpeCheck, Toast.LENGTH_SHORT).show();
-
-    }
-
-    private void init() {
         getWheat = (TextView) findViewById(R.id.wheatQuantity);
         getRice = (TextView) findViewById(R.id.riceQuantity);
         getSugar = (TextView) findViewById(R.id.sugarQuantity);
@@ -188,6 +177,166 @@ public class AllocationFair extends Activity {
         getRiceFair = (TextView) findViewById(R.id.FairRiceQuantity);
         getSugarFair = (TextView) findViewById(R.id.FairSugarQuantity);
         costView = (TextView) findViewById(R.id.totalCost1);
+        
+        if(cctype.equals("ORANGE")){
+        orangeCard();
+        }
+        else if(cctype.equals("WHITE")){
+            whiteCard();
+        }
+        else if(cctype.equals("YELLOW")){
+            yellowCard();
+        }
+
+//        cardTtpeCheck=Retrieve_data.getActivityInstance().getData();
+//
+//        Toast.makeText(AllocationFair.this, "Data from first activity is:" + cardTtpeCheck, Toast.LENGTH_SHORT).show();
+
+    }
+
+    private void yellowCard() {
+
+        //        final ParseObject gameScore = new ParseObject("Allocation");
+        final ParseQuery query = new ParseQuery("Allocation");
+//       ParseQuery Cquery =new ParseQuery("Customer");
+        query.whereEqualTo("CardType",cctype);
+
+
+        query.findInBackground(new FindCallback() {
+            @Override
+            public void done(List<ParseObject> list, ParseException e) {
+                if (e == null) {
+
+                    String recRice = list.get(0).getString("Rice");
+                    String recWheat = list.get(0).getString("Wheat");
+                    String recSugar = list.get(0).getString("Sugar");
+                    String recWheatFair = list.get(0).getString("WheatFair");
+                    String recRiceFair = list.get(0).getString("RiceFair");
+                    String recSugarFair = list.get(0).getString("SugarFair");
+
+//                      Conrting to integer
+                    int wheatInt = Integer.parseInt(recWheat);
+                    int riceInt = Integer.parseInt(recRice);
+                    int sugarInt = Integer.parseInt(recSugar);
+                    int wheatFairInt = Integer.parseInt(recWheatFair);
+                    int riceFairInt = Integer.parseInt(recRiceFair);
+                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                    int mem = Integer.parseInt(fmember);
+
+                    // getting total quantity
+                    int wheatTotal = wheatInt * mem;
+                    int riceTotal = riceInt * mem;
+
+
+
+                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
+                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
+                    getSugar.setText(sugarInt + "Kg");
+
+                    //getting total fair
+                    int wheatFair = wheatFairInt * wheatTotal;
+                    int riceFair = riceFairInt * riceTotal;
+                    int sugarFair = sugarFairInt * sugarInt;
+
+                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
+                    getSugarFair.setText(sugarFairInt + "*" + sugarInt + "= " + "Rs. " + sugarFair);
+
+//                    getRice.setText(riceInt + "Kg" );
+//                    getSugar.setText(recSugar + " Kg");
+//                    getWheatFair.setText(recWheatFair + "/Kg");
+//                    getRiceFair.setText(recRiceFair + "/Kg");
+//                    getSugarFair.setText(recSugarFair + "/Kg");
+
+//                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
+                    int costToPay = wheatFair + riceFair + sugarFair;
+                    costView.setText("Rs. " + costToPay);
+
+
+                } else {
+                    Toast.makeText(AllocationFair.this,
+                            "Data not reterived...",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+
+    }
+
+    private void whiteCard() {
+
+        //        final ParseObject gameScore = new ParseObject("Allocation");
+        final ParseQuery query = new ParseQuery("Allocation");
+//       ParseQuery Cquery =new ParseQuery("Customer");
+        query.whereEqualTo("CardType",cctype);
+
+
+        query.findInBackground(new FindCallback() {
+            @Override
+            public void done(List<ParseObject> list, ParseException e) {
+                if (e == null) {
+
+                    String recRice = list.get(0).getString("Rice");
+                    String recWheat = list.get(0).getString("Wheat");
+                    String recSugar = list.get(0).getString("Sugar");
+                    String recWheatFair = list.get(0).getString("WheatFair");
+                    String recRiceFair = list.get(0).getString("RiceFair");
+                    String recSugarFair = list.get(0).getString("SugarFair");
+
+//                      Conrting to integer
+                    int wheatInt = Integer.parseInt(recWheat);
+                    int riceInt = Integer.parseInt(recRice);
+                    int sugarInt = Integer.parseInt(recSugar);
+                    int wheatFairInt = Integer.parseInt(recWheatFair);
+                    int riceFairInt = Integer.parseInt(recRiceFair);
+                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                    int mem = Integer.parseInt(fmember);
+
+                    // getting total quantity
+                    int wheatTotal = wheatInt * mem;
+                    int riceTotal = riceInt * mem;
+
+
+
+                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
+                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
+                    getSugar.setText(sugarInt + "Kg");
+
+                    //getting total fair
+                    int wheatFair = wheatFairInt * wheatTotal;
+                    int riceFair = riceFairInt * riceTotal;
+                    int sugarFair = sugarFairInt * sugarInt;
+
+                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
+                    getSugarFair.setText(sugarFairInt + "*" + sugarInt + "= " + "Rs. " + sugarFair);
+
+//                    getRice.setText(riceInt + "Kg" );
+//                    getSugar.setText(recSugar + " Kg");
+//                    getWheatFair.setText(recWheatFair + "/Kg");
+//                    getRiceFair.setText(recRiceFair + "/Kg");
+//                    getSugarFair.setText(recSugarFair + "/Kg");
+
+//                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
+                    int costToPay = wheatFair + riceFair + sugarFair;
+                    costView.setText("Rs. " + costToPay);
+
+
+                } else {
+                    Toast.makeText(AllocationFair.this,
+                            "Data not reterived...",
+                            Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+
+    }
+
+    private void orangeCard() {
+     
 
 //        final ParseObject gameScore = new ParseObject("Allocation");
         final ParseQuery query = new ParseQuery("Allocation");
@@ -208,31 +357,32 @@ public class AllocationFair extends Activity {
                     String recSugarFair = list.get(0).getString("SugarFair");
 
 //                      Conrting to integer
-                    int wheatInt=Integer.parseInt(recWheat);
-                    int riceInt=Integer.parseInt(recRice);
-                    int sugarInt=Integer.parseInt(recSugar);
-                    int wheatFairInt=Integer.parseInt(recWheatFair);
-                    int riceFairInt=Integer.parseInt(recRiceFair);
-                    int sugarFairInt=Integer.parseInt(recSugarFair);
-                    int mem=Integer.parseInt(fmember);
+                    int wheatInt = Integer.parseInt(recWheat);
+                    int riceInt = Integer.parseInt(recRice);
+                    int sugarInt = Integer.parseInt(recSugar);
+                    int wheatFairInt = Integer.parseInt(recWheatFair);
+                    int riceFairInt = Integer.parseInt(recRiceFair);
+                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                    int mem = Integer.parseInt(fmember);
 
-            // getting total quantity
-                    int wheatTotal=wheatInt*mem;
-                    int riceTotal=riceInt*mem;
-                    int sugarTotal=sugarInt*mem;
+                    // getting total quantity
+                    int wheatTotal = wheatInt * mem;
+                    int riceTotal = riceInt * mem;
+//                    int sugarTotal = sugarInt * mem;
 
-                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
-                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
-                    getSugar.setText(sugarInt + "*" + mem + "=" + sugarTotal + "Kg");
 
-                    //getting total fair
-                    int wheatFair=wheatFairInt*wheatTotal;
-                    int riceFair=riceFairInt*riceTotal;
-                    int sugarFair=sugarFairInt*sugarTotal;
+                            getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
+                            getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
+                            getSugar.setText("None");
 
-                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
-                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " +riceFair);
-                    getSugarFair.setText(sugarFairInt + "*" + sugarTotal + "= " + "Rs. " +sugarFair);
+                            //getting total fair
+                            int wheatFair = wheatFairInt * wheatTotal;
+                            int riceFair = riceFairInt * riceTotal;
+//                            int sugarFair = sugarFairInt * sugarTotal;
+
+                            getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
+                            getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
+                            getSugarFair.setText("none");
 
 //                    getRice.setText(riceInt + "Kg" );
 //                    getSugar.setText(recSugar + " Kg");
@@ -241,17 +391,18 @@ public class AllocationFair extends Activity {
 //                    getSugarFair.setText(recSugarFair + "/Kg");
 
 //                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                    int costToPay=wheatFair+riceFair+sugarFair;
-                   costView.setText("Rs. " +costToPay);
-
+                            int costToPay = wheatFair + riceFair;
+                            costView.setText("Rs. " + costToPay);
 
 
                 } else {
                     Toast.makeText(AllocationFair.this,
                             "Data not reterived...",
-                            Toast.LENGTH_LONG).show();}
+                            Toast.LENGTH_LONG).show();
+                }
             }
         });
+
 
 
 //        query.getInBackground("dy3keagcCC", new GetCallback() {
