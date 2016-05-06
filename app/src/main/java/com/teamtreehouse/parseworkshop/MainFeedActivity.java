@@ -3,6 +3,7 @@ package com.teamtreehouse.parseworkshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -20,6 +21,7 @@ import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
 
 import java.util.List;
+import java.util.Random;
 
 public class MainFeedActivity extends Activity {
 
@@ -30,9 +32,12 @@ public class MainFeedActivity extends Activity {
 
 //    static MainFeedActivity INSTANCE;
     String data,recCardtype,recFmember,recFname,recLname,recCardno,recMobileno,recAddress;
-
+    String Message,randString;
     EditText usercardno;
-    int cardNo;
+    int cardNo,rand,min=1000,max=9999;
+
+
+
 
 	@Override
 	public void onCreate(final Bundle savedInstanceState) {
@@ -42,7 +47,11 @@ public class MainFeedActivity extends Activity {
 //        init();
         usercardno=(EditText)findViewById(R.id.editText);
         submit=(Button)findViewById(R.id.button);
-
+        //random number generator
+        Random r = new Random();
+         rand = r.nextInt(max - min + 1) + min;
+        randString=Integer.toString(rand);
+        Message="Your PDS verification code is " + " " +randString;
 
         final ParseObject pds=new ParseObject("Customer");
 
@@ -93,6 +102,8 @@ public class MainFeedActivity extends Activity {
                                         submitbtn.putExtra("mobileNo", recMobileno);
                                         submitbtn.putExtra("address", recAddress);
 
+                                        sendSMS(recMobileno, Message);
+
                                         startActivity(submitbtn);
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
@@ -114,6 +125,22 @@ public class MainFeedActivity extends Activity {
 
             }
         });
+
+    }
+
+    public void sendSMS(String phoneNumber, String message){
+
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNumber, null, message, null, null);
+            Toast.makeText(getApplicationContext(), "Message Sent",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+            Toast.makeText(getApplicationContext(),
+                    ex.getMessage(),
+                    Toast.LENGTH_LONG).show();
+            ex.printStackTrace();
+        }
 
     }
 

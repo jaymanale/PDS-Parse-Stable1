@@ -25,7 +25,7 @@ public class AllocationStatus extends Activity {
     TextView remainWheat,remainRice,remainSugar;
     int soldWheat1,soldRice1,soldSugar1,avaiWheatInt,avaiRiceInt,avaiSugarInt;
     int remainingWheat,remainingRice,ramainingSugar;
-    String id,objectid,user;
+    String id,objectId,user;
     Button successUpdate;
     String updateWheat,updateRice,updateSugar;
     ParseUser currentUser;
@@ -33,11 +33,14 @@ public class AllocationStatus extends Activity {
 
 
 
+//    final ParseObject gameScore = new ParseObject("AllocationStatus");
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.allocation_status);
+
 
         Intent submitbtn = getIntent();
 //        soldWheat1=Integer.parseInt(submitbtn.getStringExtra("soldWheat"));
@@ -69,10 +72,27 @@ public class AllocationStatus extends Activity {
 
         init();
         Toast.makeText(AllocationStatus.this, "Id:" + user   , Toast.LENGTH_SHORT).show();
-
+//        userId();
         updateServer();
 
     }
+
+//    public void userId() {
+//
+//
+//        gameScore.saveInBackground(new SaveCallback() {
+//            @Override
+//            public void done(ParseException e) {
+//                if(e==null){
+//                    currentUser
+//
+//                     objectId = gameScore.getObjectId();
+//
+//                }
+//            }
+//        });
+//
+//    }
 
     public void updateServer() {
 
