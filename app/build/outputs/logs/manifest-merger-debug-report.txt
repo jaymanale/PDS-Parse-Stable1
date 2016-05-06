@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 manifest
-ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:1:1-59:12
+ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:1:1-60:12
 	package
 		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:2:5-39
 		INJECTED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml
@@ -34,7 +34,7 @@ ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:11:22-64
 application
-ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:14:5-57:19
+ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:14:5-58:19
 	android:label
 		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:18:9-41
 	android:allowBackup
@@ -92,14 +92,14 @@ ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.x
 	android:name
 		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:46:13-75
 activity#com.teamtreehouse.parseworkshop.Retrieve_data
-ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:49:9-52:20
+ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:50:9-53:20
 	android:label
-		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:51:13-53
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:52:13-53
 	android:name
-		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:50:13-73
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:51:13-73
 activity#com.teamtreehouse.parseworkshop.AllocationFair
-ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:53:9-56:20
+ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:54:9-57:20
 	android:label
-		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:55:13-50
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:56:13-50
 	android:name
-		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:54:13-74
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:55:13-74

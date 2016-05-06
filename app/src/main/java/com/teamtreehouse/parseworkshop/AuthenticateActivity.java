@@ -21,6 +21,8 @@ public class AuthenticateActivity extends Activity {
     protected EditText mEmailField;
     protected EditText mPasswordField;
     protected Button mButton;
+    boolean doubleBackToExitPressedOnce = false;
+
     protected ProgressBar mProgressBar;
 
     @Override
@@ -127,4 +129,6 @@ public class AuthenticateActivity extends Activity {
         }
 
     }
+
+
 }

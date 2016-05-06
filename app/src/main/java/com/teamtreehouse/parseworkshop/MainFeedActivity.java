@@ -3,6 +3,7 @@ package com.teamtreehouse.parseworkshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -28,32 +29,44 @@ public class MainFeedActivity extends Activity {
 //	public static final String TAG = MainFeedActivity.class.getSimpleName();
 //
 	protected ProgressBar mProgressBar;
-    Button submit;
+    Button submit,verify;
 
 //    static MainFeedActivity INSTANCE;
     String data,recCardtype,recFmember,recFname,recLname,recCardno,recMobileno,recAddress;
-    String Message,randString;
-    EditText usercardno;
-    int cardNo,rand,min=1000,max=9999;
+    String Message,randString,getVerifiyString;
+    EditText usercardno,editVerification;
+    int cardNo,rand,min=1000,max=9999,CheckCode;
+    boolean doubleBackToExitPressedOnce = false;
 
 
 
 
-	@Override
+
+    @Override
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
 //        init();
         usercardno=(EditText)findViewById(R.id.editText);
+        editVerification=(EditText)findViewById(R.id.editText7);
         submit=(Button)findViewById(R.id.button);
-        //random number generator
-        Random r = new Random();
-         rand = r.nextInt(max - min + 1) + min;
-        randString=Integer.toString(rand);
-        Message="Your PDS verification code is " + " " +randString;
+        verify=(Button)findViewById(R.id.codeVerification);
 
-        final ParseObject pds=new ParseObject("Customer");
+//        CheckCode=Integer.parseInt(getVerifiyString);
+
+
+
+
+        //hiding fields
+        editVerification.setVisibility(View.INVISIBLE);
+        verify.setVisibility(View.INVISIBLE);
+        //random number generator
+
+
+//              Toast.makeText(MainFeedActivity.this,"code:" + getVerifiyString + "" + randString,Toast.LENGTH_LONG).show();
+
+//        final ParseObject pds=new ParseObject("Customer");
 
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -62,6 +75,11 @@ public class MainFeedActivity extends Activity {
             public void onClick(View view) {
                 mProgressBar.setVisibility(View.VISIBLE);
 
+                // getting random number
+                Random r = new Random();
+                rand = r.nextInt(max - min + 1) + min;
+                randString=Integer.toString(rand);
+                Message="Your PDS verification code is " + " " +randString;
 
                 final ParseQuery query = new ParseQuery("Customer");
                 query.whereEqualTo("CardNo", usercardno.getText().toString());
@@ -76,35 +94,21 @@ public class MainFeedActivity extends Activity {
 
                                         //code for sms
 
-                                         recFname = list.get(0).getString("First_Name");
-                                         recLname = list.get(0).getString("Last_name");
-                                         recCardno = list.get(0).getString("CardNo");
-                                         recCardtype = list.get(0).getString("CardType");
-                                         recFmember = list.get(0).getString("FamilyMember");
-                                         recMobileno = list.get(0).getString("MobileNo");
-                                         recAddress = list.get(0).getString("Address");
+                                        recFname = list.get(0).getString("First_Name");
+                                        recLname = list.get(0).getString("Last_name");
+                                        recCardno = list.get(0).getString("CardNo");
+                                        recCardtype = list.get(0).getString("CardType");
+                                        recFmember = list.get(0).getString("FamilyMember");
+                                        recMobileno = list.get(0).getString("MobileNo");
+                                        recAddress = list.get(0).getString("Address");
 
 
-//                                        String message="Your OTP: "+ranNumber + "Please Enter it in App.";
-//                                        SMS smsClient=new SMS();
-//                                        smsClient.send("9552036202", "jr2594", recMobileno, message, "");
-//
+//                                        sendSMS(recMobileno, Message);
 
+                                        codeVerify();
 
 //                                    String name = pds.getString("First_Name");
-                                        Intent submitbtn = new Intent(MainFeedActivity.this, Retrieve_data.class);
-//                                        Intent check=new Intent(MainFeedActivity.this,AllocationFair.class);
-                                        submitbtn.putExtra("fName", recFname);
-                                        submitbtn.putExtra("lName", recLname);
-                                        submitbtn.putExtra("cardNumber", recCardno);
-                                        submitbtn.putExtra("cardType", recCardtype);
-                                        submitbtn.putExtra("fmember", recFmember);
-                                        submitbtn.putExtra("mobileNo", recMobileno);
-                                        submitbtn.putExtra("address", recAddress);
 
-                                        sendSMS(recMobileno, Message);
-
-                                        startActivity(submitbtn);
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
                                     } else {
@@ -128,6 +132,61 @@ public class MainFeedActivity extends Activity {
 
     }
 
+    public void codeVerify(){
+        //hiding view
+        usercardno.setVisibility(View.INVISIBLE);
+        submit.setVisibility(View.INVISIBLE);
+//        showing view
+        editVerification.setVisibility(View.VISIBLE);
+        verify.setVisibility(View.VISIBLE);
+        Toast.makeText(MainFeedActivity.this,"code:" + randString,Toast.LENGTH_LONG).show();
+
+        verify.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                getVerifiyString=editVerification.getText().toString();
+
+
+
+//                Toast.makeText(MainFeedActivity.this,getVerifiyString + "" + randString,Toast.LENGTH_LONG).show();
+                mProgressBar.setVisibility(View.VISIBLE);
+
+                if(getVerifiyString.equals(randString)){
+
+                    mProgressBar.setVisibility(View.INVISIBLE);
+
+                    Intent submitbtn = new Intent(MainFeedActivity.this, Retrieve_data.class);
+
+                    submitbtn.putExtra("fName", recFname);
+                    submitbtn.putExtra("lName", recLname);
+                    submitbtn.putExtra("cardNumber", recCardno);
+                    submitbtn.putExtra("cardType", recCardtype);
+                    submitbtn.putExtra("fmember", recFmember);
+                    submitbtn.putExtra("mobileNo", recMobileno);
+                    submitbtn.putExtra("address", recAddress);
+
+                    startActivity(submitbtn);
+
+                }
+                else{
+                    mProgressBar.setVisibility(View.INVISIBLE);
+                    Toast.makeText(MainFeedActivity.this,
+                            "Invalid Verification Code, Try Again.",
+                            Toast.LENGTH_LONG).show();
+
+
+
+                }
+
+
+            }
+        });
+
+
+
+
+    }
     public void sendSMS(String phoneNumber, String message){
 
         try {
@@ -210,6 +269,30 @@ public class MainFeedActivity extends Activity {
 //		startActivity(intent);
 //	}
 //
+
+
+
+    @Override
+    public void onBackPressed() {
+        if (doubleBackToExitPressedOnce) {
+            super.onBackPressed();
+            return;
+        }
+
+        this.doubleBackToExitPressedOnce = true;
+        Toast.makeText(this, "Please click BACK again to exit", Toast.LENGTH_SHORT).show();
+
+        new Handler().postDelayed(new Runnable() {
+
+            @Override
+            public void run() {
+                doubleBackToExitPressedOnce=false;
+                finish();
+            }
+        }, 2000);
+    }
+
+
             @Override
             public boolean onCreateOptionsMenu(Menu menu) {
                 MenuInflater inflater = getMenuInflater();
