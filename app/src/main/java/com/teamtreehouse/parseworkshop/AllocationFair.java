@@ -145,6 +145,8 @@ package com.teamtreehouse.parseworkshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -158,7 +160,9 @@ import java.util.List;
 
 public class AllocationFair extends Activity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
-    String fmember,cctype;
+    String fmember,cctype,wheatConvert;
+    int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt;
+    Button getStatus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -177,6 +181,7 @@ public class AllocationFair extends Activity {
         getRiceFair = (TextView) findViewById(R.id.FairRiceQuantity);
         getSugarFair = (TextView) findViewById(R.id.FairSugarQuantity);
         costView = (TextView) findViewById(R.id.totalCost1);
+        getStatus=(Button)findViewById(R.id.checkStatus);
         
         if(cctype.equals("ORANGE")){
         orangeCard();
@@ -188,9 +193,29 @@ public class AllocationFair extends Activity {
             yellowCard();
         }
 
+
+        getStatusButton();
+
 //        cardTtpeCheck=Retrieve_data.getActivityInstance().getData();
 //
 //        Toast.makeText(AllocationFair.this, "Data from first activity is:" + cardTtpeCheck, Toast.LENGTH_SHORT).show();
+
+    }
+
+    public void getStatusButton() {
+        getStatus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent allocation = new Intent(AllocationFair.this, AllocationStatus.class);
+//                wheatConvert =Integer.toString(wheatTotal);
+
+                allocation.putExtra("soldWheat", wheatTotal);
+                allocation.putExtra("soldRice",riceTotal);
+                allocation.putExtra("soldSugar",sugarInt);
+                startActivity(allocation);
+
+            }
+        });
 
     }
 
@@ -215,17 +240,17 @@ public class AllocationFair extends Activity {
                     String recSugarFair = list.get(0).getString("SugarFair");
 
 //                      Conrting to integer
-                    int wheatInt = Integer.parseInt(recWheat);
-                    int riceInt = Integer.parseInt(recRice);
-                    int sugarInt = Integer.parseInt(recSugar);
+                    wheatInt = Integer.parseInt(recWheat);
+                    riceInt = Integer.parseInt(recRice);
+                     sugarInt = Integer.parseInt(recSugar);
                     int wheatFairInt = Integer.parseInt(recWheatFair);
                     int riceFairInt = Integer.parseInt(recRiceFair);
                     int sugarFairInt = Integer.parseInt(recSugarFair);
-                    int mem = Integer.parseInt(fmember);
+                     mem = Integer.parseInt(fmember);
 
                     // getting total quantity
-                    int wheatTotal = wheatInt * mem;
-                    int riceTotal = riceInt * mem;
+                     wheatTotal = wheatInt * mem;
+                     riceTotal = riceInt * mem;
 
 
 
@@ -286,17 +311,17 @@ public class AllocationFair extends Activity {
                     String recSugarFair = list.get(0).getString("SugarFair");
 
 //                      Conrting to integer
-                    int wheatInt = Integer.parseInt(recWheat);
-                    int riceInt = Integer.parseInt(recRice);
-                    int sugarInt = Integer.parseInt(recSugar);
+                    wheatInt = Integer.parseInt(recWheat);
+                     riceInt = Integer.parseInt(recRice);
+                     sugarInt = Integer.parseInt(recSugar);
                     int wheatFairInt = Integer.parseInt(recWheatFair);
                     int riceFairInt = Integer.parseInt(recRiceFair);
                     int sugarFairInt = Integer.parseInt(recSugarFair);
-                    int mem = Integer.parseInt(fmember);
+                     mem = Integer.parseInt(fmember);
 
                     // getting total quantity
-                    int wheatTotal = wheatInt * mem;
-                    int riceTotal = riceInt * mem;
+                    wheatTotal = wheatInt * mem;
+                     riceTotal = riceInt * mem;
 
 
 
@@ -357,17 +382,17 @@ public class AllocationFair extends Activity {
                     String recSugarFair = list.get(0).getString("SugarFair");
 
 //                      Conrting to integer
-                    int wheatInt = Integer.parseInt(recWheat);
-                    int riceInt = Integer.parseInt(recRice);
+                     wheatInt = Integer.parseInt(recWheat);
+                    riceInt = Integer.parseInt(recRice);
                     int sugarInt = Integer.parseInt(recSugar);
                     int wheatFairInt = Integer.parseInt(recWheatFair);
                     int riceFairInt = Integer.parseInt(recRiceFair);
                     int sugarFairInt = Integer.parseInt(recSugarFair);
-                    int mem = Integer.parseInt(fmember);
+                    mem = Integer.parseInt(fmember);
 
                     // getting total quantity
-                    int wheatTotal = wheatInt * mem;
-                    int riceTotal = riceInt * mem;
+                    wheatTotal = wheatInt * mem;
+                    riceTotal = riceInt * mem;
 //                    int sugarTotal = sugarInt * mem;
 
 

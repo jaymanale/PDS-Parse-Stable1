@@ -12,12 +12,15 @@
         android:layout_width="fill_parent"
         android:layout_height="428dp"
         android:columnCount="2"
-        android:rowCount="19"
+        android:rowCount="10"
         android:orientation="horizontal"
         android:padding="10dp"
         android:horizontalSpacing="2dp"
         android:verticalSpacing="2dp"
-        android:id="@+id/gridLayout">
+        android:id="@+id/gridLayout"
+        android:layout_alignParentTop="true"
+        android:layout_alignRight="@+id/button2"
+        android:layout_alignEnd="@+id/button2">
 
         <TextView
             android:layout_width="wrap_content"
@@ -128,15 +131,15 @@
             android:id="@+id/textView11" />
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
+            android:layout_width="163dp"
+            android:layout_height="128dp"
+            android:text=""
+            android:id="@+id/textView12"
+            android:layout_row="6"
             android:textSize="21sp"
-            android:gravity="center_horizontal"
-
-            android:layout_gravity="left|top"
-            android:id="@+id/textView12" />
-
-
+            android:singleLine="false"
+            android:layout_column="1"
+            android:layout_rowSpan="4" />
 
 
     </GridLayout>

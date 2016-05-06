@@ -61,6 +61,12 @@ category#android.intent.category.LAUNCHER
 ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:26:17-77
 	android:name
 		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:26:27-74
+activity#com.teamtreehouse.parseworkshop.AllocationStatus
+ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:29:9-32:20
+	android:label
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:31:13-35
+	android:name
+		ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:30:13-76
 activity#com.teamtreehouse.parseworkshop.MainFeedActivity
 ADDED from C:\Users\Jay\Desktop\PDS-Parse-Stable1\app\src\main\AndroidManifest.xml:33:9-36:20
 	android:label
