@@ -212,9 +212,9 @@ public class AllocationFair extends Activity {
         getStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Message="Fair /Kg:\n Wheat: "+ wheatFairInt + ", Rice: "+riceFairInt + ", Sugar " +
-                        sugarFairInt + "\nTotal Quantity \n Wheat: " +wheatTotal + ", Rice: "+ riceTotal +", Sugar " +
-                        sugarInt + "\n Total Fair: "+costToPay +" Rs";
+                Message="Total Allocated Quantity- \nWheat: " +wheatTotal +" Kg"+ ", Rice: "+ riceTotal + " Kg"+", Sugar " +
+                        sugarInt + " Kg"+ "\nFair /Kg-\nWheat: Rs. "+ wheatFairInt + ", Rice: Rs. "+riceFairInt + ", Sugar: Rs. " +
+                sugarFairInt + "\n\n Total Fair: Rs. "+costToPay;
                 Toast.makeText(AllocationFair.this, "message" + Message, Toast.LENGTH_SHORT).show();
 
                 sendSMS(mobileNo, Message);

@@ -112,7 +112,7 @@ public class MainFeedActivity extends Activity {
                                         recAddress = list.get(0).getString("Address");
 
 
-                                        sendSMS(recMobileno, Message);
+//                                        sendSMS(recMobileno, Message);
 
                                         codeVerify();
 
