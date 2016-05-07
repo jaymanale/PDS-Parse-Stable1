@@ -13,13 +13,17 @@
 
     <application
         android:name="com.teamtreehouse.parseworkshop.ParseWorkshopApplication"
+
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
             android:name="com.teamtreehouse.parseworkshop.AuthenticateActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -28,32 +32,46 @@
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.AllocationStatus"
-            android:label="Status" >
+            android:label="Status"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.MainFeedActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.SelectUsersActivity"
-            android:label="@string/title_activity_select_users" >
+            android:label="@string/title_activity_select_users"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.Dashboard"
-            android:label="@string/vendordash" >
+            android:label="@string/vendordash"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.AddLinkActivity"
-            android:label="@string/title_activity_add_link" >
+            android:label="@string/title_activity_add_link"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
 
         <activity
             android:name="com.teamtreehouse.parseworkshop.Retrieve_data"
-            android:label="@string/user_information" >
+            android:label="@string/user_information"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name="com.teamtreehouse.parseworkshop.AllocationFair"
-            android:label="Allocation &amp; Fair" >
+            android:label="Allocation &amp; Fair"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
