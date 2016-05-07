@@ -33,6 +33,7 @@ public class AuthenticateActivity extends Activity {
         final Context context = this;
 
         mEmailField = (EditText) findViewById(R.id.editText1);
+
         mPasswordField = (EditText) findViewById(R.id.editText2);
         mButton = (Button) findViewById(R.id.button1);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
@@ -131,7 +132,7 @@ public class AuthenticateActivity extends Activity {
                                         // ParseException to see what happened.
                                         Toast.makeText(
                                                 AuthenticateActivity.this,
-                                                "Login failed! Invalid E-mailId OR Password.",
+                                                "Login failed! Invalid E-mail address OR Password.",
                                                 Toast.LENGTH_LONG).show();
                                     }
                                 }
