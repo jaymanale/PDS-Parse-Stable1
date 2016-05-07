@@ -1,171 +1,263 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fillViewport="false">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="wrap_content"
-    >
+    android:orientation="horizontal" >
 
 
-
-    <GridLayout
-        android:layout_width="fill_parent"
-        android:layout_height="428dp"
-        android:columnCount="2"
-        android:rowCount="10"
-        android:orientation="horizontal"
-        android:padding="10dp"
-        android:horizontalSpacing="2dp"
-        android:verticalSpacing="2dp"
-        android:id="@+id/gridLayout"
-        android:layout_alignParentTop="true"
-        android:layout_alignRight="@+id/button2"
-        android:layout_alignEnd="@+id/button2">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="First Name"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/textView2" />
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Last Name"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView3" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/textView4" />
-       <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Card Number"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView5" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/textView6" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Card Type"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView7" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/textView8" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Family Member"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/fmember" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/fmemberview" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Mobile Number"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView9" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="21sp"
-            android:layout_gravity="left|top"
-            android:id="@+id/textView10" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Address"
-            android:layout_gravity="left|top"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="20dp"
-            android:textSize="21sp"
-            android:id="@+id/textView11" />
-
-        <TextView
-            android:layout_width="163dp"
-            android:layout_height="128dp"
-            android:text=""
-            android:id="@+id/textView12"
-            android:layout_row="6"
-            android:textSize="21sp"
-            android:singleLine="false"
-            android:layout_column="1"
-            android:layout_rowSpan="4" />
-
-
-    </GridLayout>
-
-    <Button
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Allocation &amp; Fair"
-        android:id="@+id/button2"
-        android:layout_below="@+id/gridLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:background="#176CEC"
-        android:textColor="#fff"
-        android:textStyle="bold"
-        android:textSize="20sp"
+        android:orientation="vertical" >
 
-        />
 
-    <ProgressBar
-        android:id="@+id/progressBar1"
-        style="?android:attr/progressBarStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
 
-</RelativeLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="hello world"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView2" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="80dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Last Name"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView4" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Number"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="58dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView5" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Card Number"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView6" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Card Type"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="88dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView7" />
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Card Type"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView8" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Family Member"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/fmember" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Family Member"
+                android:layout_gravity="left|top"
+                android:id="@+id/fmemberview" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mobile Number"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="40dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView9" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Mobile Number"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView10" />
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:layout_gravity="left|top"
+                android:layout_marginRight="107dp"
+                android:layout_marginBottom="20dp"
+                android:textSize="21sp"
+                android:id="@+id/textView11" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="21sp"
+                android:text="Address"
+                android:layout_gravity="left|top"
+                android:id="@+id/textView12"/>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="2dp"
+            android:background="#c0c0c0"
+            android:layout_marginBottom="10dp"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Allocation &amp; Fair"
+            android:id="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="#176CEC"
+            android:textColor="#fff"
+            android:textStyle="bold"
+            android:textSize="20sp"
+
+            />
+
+    </LinearLayout>
+
+    </LinearLayout>
+    </ScrollView>

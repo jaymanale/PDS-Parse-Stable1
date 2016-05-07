@@ -33,10 +33,11 @@ public class MainFeedActivity extends Activity {
 
 //    static MainFeedActivity INSTANCE;
     String data,recCardtype,recFmember,recFname,recLname,recCardno,recMobileno,recAddress;
-    String Message,randString,getVerifiyString;
+    String Message,randString,getVerifiyString,objedtid;
     EditText usercardno,editVerification;
     int cardNo,rand,min=1000,max=9999,CheckCode;
     boolean doubleBackToExitPressedOnce = false;
+    ParseUser currentUser;
 
 
 
@@ -47,6 +48,10 @@ public class MainFeedActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
         mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
+
+
+        currentUser =ParseUser.getCurrentUser();
+        objedtid=currentUser.getObjectId();
 //        init();
         usercardno=(EditText)findViewById(R.id.editText);
         editVerification=(EditText)findViewById(R.id.editText7);
@@ -64,7 +69,7 @@ public class MainFeedActivity extends Activity {
         //random number generator
 
 
-//              Toast.makeText(MainFeedActivity.this,"code:" + getVerifiyString + "" + randString,Toast.LENGTH_LONG).show();
+              Toast.makeText(MainFeedActivity.this,"object :" +objedtid,Toast.LENGTH_LONG).show();
 
 //        final ParseObject pds=new ParseObject("Customer");
 

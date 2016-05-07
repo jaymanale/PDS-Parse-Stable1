@@ -254,18 +254,18 @@ public class AllocationFair extends Activity {
 
 
 
-                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
-                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
-                    getSugar.setText(sugarInt + "Kg");
+                    getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
+                    getRice.setText(riceInt + " * " + mem + " =" + riceTotal + " Kg");
+                    getSugar.setText(sugarInt + " Kg");
 
                     //getting total fair
                     int wheatFair = wheatFairInt * wheatTotal;
                     int riceFair = riceFairInt * riceTotal;
                     int sugarFair = sugarFairInt * sugarInt;
 
-                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
-                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
-                    getSugarFair.setText(sugarFairInt + "*" + sugarInt + "= " + "Rs. " + sugarFair);
+                    getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
+                    getSugarFair.setText(sugarFairInt + " * " + sugarInt + " = " + "Rs. " + sugarFair);
 
 //                    getRice.setText(riceInt + "Kg" );
 //                    getSugar.setText(recSugar + " Kg");
@@ -325,18 +325,18 @@ public class AllocationFair extends Activity {
 
 
 
-                    getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
-                    getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
-                    getSugar.setText(sugarInt + "Kg");
+                    getWheat.setText(wheatInt + " * " + mem + "=" + wheatTotal + " Kg");
+                    getRice.setText(riceInt + " * " + mem + "=" + riceTotal + " Kg");
+                    getSugar.setText(sugarInt + " Kg");
 
                     //getting total fair
                     int wheatFair = wheatFairInt * wheatTotal;
                     int riceFair = riceFairInt * riceTotal;
                     int sugarFair = sugarFairInt * sugarInt;
 
-                    getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
-                    getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
-                    getSugarFair.setText(sugarFairInt + "*" + sugarInt + "= " + "Rs. " + sugarFair);
+                    getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
+                    getSugarFair.setText(sugarFairInt + " * " + sugarInt + " = " + "Rs. " + sugarFair);
 
 //                    getRice.setText(riceInt + "Kg" );
 //                    getSugar.setText(recSugar + " Kg");
@@ -396,8 +396,8 @@ public class AllocationFair extends Activity {
 //                    int sugarTotal = sugarInt * mem;
 
 
-                            getWheat.setText(wheatInt + "*" + mem + "=" + wheatTotal + "Kg");
-                            getRice.setText(riceInt + "*" + mem + "=" + riceTotal + "Kg");
+                            getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
+                            getRice.setText(riceInt + " * " + mem + " = " + riceTotal + " Kg");
                             getSugar.setText("None");
 
                             //getting total fair
@@ -405,8 +405,8 @@ public class AllocationFair extends Activity {
                             int riceFair = riceFairInt * riceTotal;
 //                            int sugarFair = sugarFairInt * sugarTotal;
 
-                            getWheatFair.setText(wheatFairInt + "*" + wheatTotal + "= " + "Rs. " + wheatFair);
-                            getRiceFair.setText(riceFairInt + "*" + riceTotal + "= " + "Rs. " + riceFair);
+                            getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
+                            getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
                             getSugarFair.setText("none");
 
 //                    getRice.setText(riceInt + "Kg" );

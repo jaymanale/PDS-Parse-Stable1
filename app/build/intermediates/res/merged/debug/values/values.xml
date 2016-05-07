@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <string name="AvailableQTitle"><b><u>Available Quantity</u></b></string>
+    <string name="QuantityStatusTitle"><b><u>Quantity Status</u></b></string>
+    <string name="RamainingQTitle"><b><u>Ramaining Quantity</u></b></string>
     <string name="ab_add">Add New Customer</string>
     <string name="ab_dashboard">Dashboard</string>
     <string name="ab_help">Help</string>
@@ -8,17 +11,21 @@
     <string name="app_name">PDS</string>
     <string name="desc_treehouse_logo">Treehouse Logo</string>
     <string name="email_address_hint">email address</string>
+    <string name="fairTitle"><b><u>Fair</u></b></string>
     <string name="loginButtonLabel">Log In</string>
     <string name="login_button_label">Log In</string>
     <string name="menu_settings">Settings</string>
     <string name="password_hint">password</string>
+    <string name="quantityTitle"><b><u>Quantity</u></b></string>
     <string name="signup_button_label">Sign Up</string>
     <string name="title_activity_add_link">Add New Customer</string>
     <string name="title_activity_authenticate">Log In</string>
     <string name="title_activity_login_or_signup">Log In or Sign Up</string>
     <string name="title_activity_select_users">Help</string>
+    <string name="totalFair"><b>Total Fair</b></string>
     <string name="user_information">User information</string>
     <string name="vendordash">Dashboard</string>
+    <string name="wheat">Wheat</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">
         <!--
             Theme customizations available in newer API levels can go in

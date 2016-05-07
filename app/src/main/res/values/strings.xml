@@ -19,5 +19,12 @@
     <string name="desc_treehouse_logo">Treehouse Logo</string>
     <string name="vendordash">Dashboard</string>
     <string name="user_information">User information</string>
+    <string name="quantityTitle"><b><u>Quantity</u></b></string>
+    <string name="fairTitle"><b><u>Fair</u></b></string>
+    <string name="wheat">Wheat</string>
+    <string name="totalFair"><b>Total Fair</b></string>
+    <string name="QuantityStatusTitle"><b><u>Quantity Status</u></b></string>
+    <string name="AvailableQTitle"><b><u>Available Quantity</u></b></string>
+    <string name="RamainingQTitle"><b><u>Ramaining Quantity</u></b></string>
 
 </resources>
