@@ -36,7 +36,7 @@ public class AuthenticateActivity extends Activity {
 
         mPasswordField = (EditText) findViewById(R.id.editText2);
         mButton = (Button) findViewById(R.id.button1);
-        mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
+//        mProgressBar = (ProgressBar) findViewById(R.id.progressBar1);
 
         if (ParseUser.getCurrentUser() != null) {
             Intent intent = new Intent(this, MainFeedActivity.class);

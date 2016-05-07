@@ -419,14 +419,7 @@
                     "endOffset": 127
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 26,
-                        "startColumn": 4,
-                        "startOffset": 1392,
-                        "endColumn": 76,
-                        "endOffset": 1464
-                    }
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -438,14 +431,7 @@
                     "endOffset": 205
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 25,
-                        "startColumn": 4,
-                        "startOffset": 1313,
-                        "endColumn": 77,
-                        "endOffset": 1386
-                    }
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -457,14 +443,7 @@
                     "endOffset": 282
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml",
-                    "position": {
-                        "startLine": 27,
-                        "startColumn": 4,
-                        "startOffset": 1470,
-                        "endColumn": 76,
-                        "endOffset": 1542
-                    }
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\strings.xml"
                 }
             },
             {
@@ -761,12 +740,20 @@
                     "startLine": 35,
                     "startColumn": 4,
                     "startOffset": 1849,
-                    "endLine": 37,
+                    "endLine": 38,
                     "endColumn": 12,
-                    "endOffset": 2004
+                    "endOffset": 2005
                 },
                 "from": {
-                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\styles.xml"
+                    "file": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\values\\styles.xml",
+                    "position": {
+                        "startLine": 15,
+                        "startColumn": 4,
+                        "startOffset": 525,
+                        "endLine": 18,
+                        "endColumn": 12,
+                        "endOffset": 684
+                    }
                 }
             }
         ]

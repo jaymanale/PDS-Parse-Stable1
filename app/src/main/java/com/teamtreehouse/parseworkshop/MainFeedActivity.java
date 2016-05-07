@@ -81,6 +81,7 @@ public class MainFeedActivity extends Activity {
 
             @Override
             public void onClick(View view) {
+                usercardno.setCursorVisible(false);
                 mProgressBar.setVisibility(View.VISIBLE);
 
                 // getting random number
@@ -169,6 +170,7 @@ public class MainFeedActivity extends Activity {
         verify.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                editVerification.setCursorVisible(false);
 
                 getVerifiyString=editVerification.getText().toString();
 
