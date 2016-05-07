@@ -1,6 +1,8 @@
 package com.teamtreehouse.parseworkshop;
 
 import android.app.Activity;
+import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -28,6 +30,7 @@ public class AuthenticateActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_authenticate);
+        final Context context = this;
 
         mEmailField = (EditText) findViewById(R.id.editText1);
         mPasswordField = (EditText) findViewById(R.id.editText2);
@@ -45,7 +48,17 @@ public class AuthenticateActivity extends Activity {
             mButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    mProgressBar.setVisibility(View.VISIBLE);
+//                    mProgressBar.setVisibility(View.VISIBLE);
+                    showProgressDialog(context, new Runnable() {
+                        @Override
+                        public void run() {
+                            try {
+                                Thread.sleep(1000);
+                            } catch (InterruptedException e) {
+                                e.printStackTrace();
+                            }
+                        }
+                    });
 
                     String username = mEmailField.getText().toString();
                     String password = mPasswordField.getText().toString();
@@ -107,7 +120,7 @@ public class AuthenticateActivity extends Activity {
                             new LogInCallback() {
                                 public void done(ParseUser user,
                                                  ParseException e) {
-                                    mProgressBar.setVisibility(View.INVISIBLE);
+//                                    mProgressBar.setVisibility(View.INVISIBLE);
                                     if (user != null) {
                                         // Hooray! The user is logged in.
                                         startActivity(new Intent(
@@ -118,7 +131,7 @@ public class AuthenticateActivity extends Activity {
                                         // ParseException to see what happened.
                                         Toast.makeText(
                                                 AuthenticateActivity.this,
-                                                "Login failed! Try again.",
+                                                "Login failed! Invalid E-mailId OR Password.",
                                                 Toast.LENGTH_LONG).show();
                                     }
                                 }
@@ -127,6 +140,20 @@ public class AuthenticateActivity extends Activity {
             });
         }
 
+    }
+    private void showProgressDialog(final Context context, final Runnable runnable) {
+        final ProgressDialog ringProgressDialog = ProgressDialog.show(context, "Log In", "User Validation...", true);
+        //you usually don't want the user to stop the current process, and this will make sure of that
+        ringProgressDialog.setCancelable(false);
+        Thread th = new Thread(new Runnable() {
+            @Override
+            public void run() {
+
+                runnable.run();
+                ringProgressDialog.dismiss();
+            }
+        });
+        th.start();
     }
 
 
