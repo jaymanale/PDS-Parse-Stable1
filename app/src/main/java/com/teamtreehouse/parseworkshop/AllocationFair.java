@@ -145,6 +145,7 @@ package com.teamtreehouse.parseworkshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -160,8 +161,8 @@ import java.util.List;
 
 public class AllocationFair extends Activity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
-    String fmember,cctype,wheatConvert;
-    int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt;
+    String fmember,cctype,wheatConvert,mobileNo,Message;
+    int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt,wheatFairInt,riceFairInt,sugarFairInt,costToPay;
     Button getStatus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -172,8 +173,9 @@ public class AllocationFair extends Activity {
         Intent submitbtn = getIntent();
          cctype=submitbtn.getStringExtra("ctype");
         fmember=submitbtn.getStringExtra("fmember");
+        mobileNo=submitbtn.getStringExtra("fNumber");
 
-        Toast.makeText(AllocationFair.this, "Card Type:" + cctype, Toast.LENGTH_SHORT).show();
+        Toast.makeText(AllocationFair.this, "Card Type:" + mobileNo, Toast.LENGTH_SHORT).show();
         getWheat = (TextView) findViewById(R.id.wheatQuantity);
         getRice = (TextView) findViewById(R.id.riceQuantity);
         getSugar = (TextView) findViewById(R.id.sugarQuantity);
@@ -182,6 +184,8 @@ public class AllocationFair extends Activity {
         getSugarFair = (TextView) findViewById(R.id.FairSugarQuantity);
         costView = (TextView) findViewById(R.id.totalCost1);
         getStatus=(Button)findViewById(R.id.checkStatus);
+
+
         
         if(cctype.equals("ORANGE")){
         orangeCard();
@@ -202,10 +206,18 @@ public class AllocationFair extends Activity {
 
     }
 
+
+
     public void getStatusButton() {
         getStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                Message="Fair /Kg:\n Wheat: "+ wheatFairInt + ", Rice: "+riceFairInt + ", Sugar " +
+                        sugarFairInt + "\nTotal Quantity \n Wheat: " +wheatTotal + ", Rice: "+ riceTotal +", Sugar " +
+                        sugarInt + "\n Total Fair: "+costToPay +" Rs";
+                Toast.makeText(AllocationFair.this, "message" + Message, Toast.LENGTH_SHORT).show();
+
+                sendSMS(mobileNo, Message);
                 Intent allocation = new Intent(AllocationFair.this, AllocationStatus.class);
 //                wheatConvert =Integer.toString(wheatTotal);
 
@@ -218,6 +230,24 @@ public class AllocationFair extends Activity {
         });
 
     }
+    public void sendSMS(String phoneNumber, String message){
+
+        try {
+            SmsManager smsManager = SmsManager.getDefault();
+            smsManager.sendTextMessage(phoneNumber, null, message, null, null);
+            Toast.makeText(getApplicationContext(), "SMS send Successfully...",
+                    Toast.LENGTH_LONG).show();
+        } catch (Exception ex) {
+            Toast.makeText(getApplicationContext(),
+                    ex.getMessage(),
+                    Toast.LENGTH_LONG).show();
+            ex.printStackTrace();
+        }
+
+    }
+
+
+
 
     private void yellowCard() {
 
@@ -243,9 +273,9 @@ public class AllocationFair extends Activity {
                     wheatInt = Integer.parseInt(recWheat);
                     riceInt = Integer.parseInt(recRice);
                      sugarInt = Integer.parseInt(recSugar);
-                    int wheatFairInt = Integer.parseInt(recWheatFair);
-                    int riceFairInt = Integer.parseInt(recRiceFair);
-                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                    wheatFairInt = Integer.parseInt(recWheatFair);
+                    riceFairInt = Integer.parseInt(recRiceFair);
+                    sugarFairInt = Integer.parseInt(recSugarFair);
                      mem = Integer.parseInt(fmember);
 
                     // getting total quantity
@@ -274,7 +304,7 @@ public class AllocationFair extends Activity {
 //                    getSugarFair.setText(recSugarFair + "/Kg");
 
 //                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                    int costToPay = wheatFair + riceFair + sugarFair;
+                     costToPay = wheatFair + riceFair + sugarFair;
                     costView.setText("Rs. " + costToPay);
 
 
@@ -314,9 +344,9 @@ public class AllocationFair extends Activity {
                     wheatInt = Integer.parseInt(recWheat);
                      riceInt = Integer.parseInt(recRice);
                      sugarInt = Integer.parseInt(recSugar);
-                    int wheatFairInt = Integer.parseInt(recWheatFair);
-                    int riceFairInt = Integer.parseInt(recRiceFair);
-                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                     wheatFairInt = Integer.parseInt(recWheatFair);
+                    riceFairInt = Integer.parseInt(recRiceFair);
+                     sugarFairInt = Integer.parseInt(recSugarFair);
                      mem = Integer.parseInt(fmember);
 
                     // getting total quantity
@@ -345,7 +375,7 @@ public class AllocationFair extends Activity {
 //                    getSugarFair.setText(recSugarFair + "/Kg");
 
 //                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                    int costToPay = wheatFair + riceFair + sugarFair;
+                    costToPay = wheatFair + riceFair + sugarFair;
                     costView.setText("Rs. " + costToPay);
 
 
@@ -384,10 +414,10 @@ public class AllocationFair extends Activity {
 //                      Conrting to integer
                      wheatInt = Integer.parseInt(recWheat);
                     riceInt = Integer.parseInt(recRice);
-                    int sugarInt = Integer.parseInt(recSugar);
-                    int wheatFairInt = Integer.parseInt(recWheatFair);
-                    int riceFairInt = Integer.parseInt(recRiceFair);
-                    int sugarFairInt = Integer.parseInt(recSugarFair);
+                    sugarInt = Integer.parseInt(recSugar);
+                     wheatFairInt = Integer.parseInt(recWheatFair);
+                     riceFairInt = Integer.parseInt(recRiceFair);
+                    sugarFairInt = Integer.parseInt(recSugarFair);
                     mem = Integer.parseInt(fmember);
 
                     // getting total quantity
@@ -398,7 +428,7 @@ public class AllocationFair extends Activity {
 
                             getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
                             getRice.setText(riceInt + " * " + mem + " = " + riceTotal + " Kg");
-                            getSugar.setText("None");
+                            getSugar.setText(sugarInt + " Kg");
 
                             //getting total fair
                             int wheatFair = wheatFairInt * wheatTotal;
@@ -407,7 +437,7 @@ public class AllocationFair extends Activity {
 
                             getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
                             getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
-                            getSugarFair.setText("none");
+                            getSugarFair.setText(sugarFairInt + " Kg");
 
 //                    getRice.setText(riceInt + "Kg" );
 //                    getSugar.setText(recSugar + " Kg");
@@ -416,7 +446,7 @@ public class AllocationFair extends Activity {
 //                    getSugarFair.setText(recSugarFair + "/Kg");
 
 //                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                            int costToPay = wheatFair + riceFair;
+                            costToPay = wheatFair + riceFair;
                             costView.setText("Rs. " + costToPay);
 
 
