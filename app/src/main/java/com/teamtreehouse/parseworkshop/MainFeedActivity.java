@@ -38,6 +38,7 @@ public class MainFeedActivity extends Activity {
     int cardNo,rand,min=1000,max=9999,CheckCode;
     boolean doubleBackToExitPressedOnce = false;
     ParseUser currentUser;
+    Button Cancel;
 
 
 
@@ -56,6 +57,7 @@ public class MainFeedActivity extends Activity {
         usercardno=(EditText)findViewById(R.id.editText);
         editVerification=(EditText)findViewById(R.id.editText7);
         submit=(Button)findViewById(R.id.button);
+        Cancel=(Button)findViewById(R.id.cancel);
         verify=(Button)findViewById(R.id.codeVerification);
 
 //        CheckCode=Integer.parseInt(getVerifiyString);
@@ -66,6 +68,7 @@ public class MainFeedActivity extends Activity {
         //hiding fields
         editVerification.setVisibility(View.INVISIBLE);
         verify.setVisibility(View.INVISIBLE);
+        Cancel.setVisibility(View.INVISIBLE);
         //random number generator
 
 
@@ -113,7 +116,7 @@ public class MainFeedActivity extends Activity {
                                         codeVerify();
 
 //                                    String name = pds.getString("First_Name");
-
+                                            cancleButton();
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
                                     } else {
@@ -137,13 +140,30 @@ public class MainFeedActivity extends Activity {
 
     }
 
+
+
+
+    public void cancleButton(){
+        Cancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onCreate(new Bundle());
+            }
+        });
+
+
+    }
+
     public void codeVerify(){
         //hiding view
         usercardno.setVisibility(View.INVISIBLE);
         submit.setVisibility(View.INVISIBLE);
+
 //        showing view
         editVerification.setVisibility(View.VISIBLE);
         verify.setVisibility(View.VISIBLE);
+        Cancel.setVisibility(View.VISIBLE);
+
         Toast.makeText(MainFeedActivity.this,"code:" + randString,Toast.LENGTH_LONG).show();
 
         verify.setOnClickListener(new View.OnClickListener() {
@@ -291,10 +311,12 @@ public class MainFeedActivity extends Activity {
 
             @Override
             public void run() {
+
                 doubleBackToExitPressedOnce=false;
-                finish();
+                System.exit(1);
+
             }
-        }, 2000);
+        }, 1000);
     }
 
 
