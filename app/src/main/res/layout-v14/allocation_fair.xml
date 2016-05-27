@@ -253,13 +253,14 @@
 
     <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:theme="@style/MyButton"
+        android:layout_height="60dp"
         android:text="Check Status"
         android:id="@+id/checkStatus"
         android:layout_marginTop="20dp"
-        android:background="#176CEC"
+
         android:textColor="#fff"
-        android:textStyle="bold"
+
         android:layout_margin="10dp"
         android:textSize="20sp"
         android:layout_below="@+id/editText"

@@ -1,13 +1,13 @@
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 
 import com.parse.ParseObject;
 import com.teamtreehouse.readme.R;
 
-public class SelectUsersActivity extends Activity {
+public class SelectUsersActivity extends AppCompatActivity {
 	
 	public static final String TAG = SelectUsersActivity.class.getSimpleName();
 	

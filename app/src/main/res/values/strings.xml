@@ -25,6 +25,6 @@
     <string name="totalFair"><b>Total Fair</b></string>
     <string name="QuantityStatusTitle"><b><u>Quantity Status</u></b></string>
     <string name="AvailableQTitle"><b><u>Available Quantity</u></b></string>
-    <string name="RamainingQTitle"><b><u>Ramaining Quantity</u></b></string>
+    <string name="RamainingQTitle"><b><u>Remaining Quantity</u></b></string>
 
 </resources>

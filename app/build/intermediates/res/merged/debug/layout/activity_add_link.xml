@@ -128,14 +128,15 @@
 
     <Button
         android:id="@+id/button1"
+        android:theme="@style/MyButton"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_margin="10dp"
         android:text="Post"
         android:longClickable="false"
-        android:background="#176CEC"
+
         android:textColor="#fff"
-        android:textStyle="bold"
+
         android:textSize="20sp" />
 
 

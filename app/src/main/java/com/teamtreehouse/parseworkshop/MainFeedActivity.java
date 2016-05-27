@@ -1,9 +1,9 @@
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -24,7 +24,7 @@ import com.teamtreehouse.readme.R;
 import java.util.List;
 import java.util.Random;
 
-public class MainFeedActivity extends Activity {
+public class MainFeedActivity extends AppCompatActivity {
 
 //	public static final String TAG = MainFeedActivity.class.getSimpleName();
 //
@@ -63,16 +63,25 @@ public class MainFeedActivity extends Activity {
 //        CheckCode=Integer.parseInt(getVerifiyString);
 
 
+        mainCode();
+
+    }
+
+    private void mainCode() {
 
 
         //hiding fields
         editVerification.setVisibility(View.INVISIBLE);
         verify.setVisibility(View.INVISIBLE);
         Cancel.setVisibility(View.INVISIBLE);
+
+        usercardno.setVisibility(View.VISIBLE);
+        submit.setVisibility(View.VISIBLE);
+        usercardno.getText().clear();
         //random number generator
 
 
-              Toast.makeText(MainFeedActivity.this,"object :" +objedtid,Toast.LENGTH_LONG).show();
+        Toast.makeText(MainFeedActivity.this,"object :" +objedtid,Toast.LENGTH_LONG).show();
 
 //        final ParseObject pds=new ParseObject("Customer");
 
@@ -112,12 +121,12 @@ public class MainFeedActivity extends Activity {
                                         recAddress = list.get(0).getString("Address");
 
 
-//                                        sendSMS(recMobileno, Message);
+                                        sendSMS(recMobileno, Message);
 
                                         codeVerify();
 
 //                                    String name = pds.getString("First_Name");
-                                            cancleButton();
+                                        cancleButton();
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
                                     } else {
@@ -138,17 +147,14 @@ public class MainFeedActivity extends Activity {
 
             }
         });
-
     }
-
-
 
 
     public void cancleButton(){
         Cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                onCreate(new Bundle());
+                mainCode();
             }
         });
 
@@ -162,6 +168,7 @@ public class MainFeedActivity extends Activity {
 
 //        showing view
         editVerification.setVisibility(View.VISIBLE);
+        editVerification.getText().clear();
         verify.setVisibility(View.VISIBLE);
         Cancel.setVisibility(View.VISIBLE);
 

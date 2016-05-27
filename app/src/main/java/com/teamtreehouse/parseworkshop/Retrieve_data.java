@@ -164,6 +164,7 @@ package com.teamtreehouse.parseworkshop;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -171,7 +172,7 @@ import android.widget.TextView;
 import com.teamtreehouse.readme.R;
 
 
-public class Retrieve_data extends Activity {
+public class Retrieve_data extends AppCompatActivity {
 
 
     TextView getfName, getlName, getCardno, getCardtype, getMobile, getAddress,getFamilyMember;

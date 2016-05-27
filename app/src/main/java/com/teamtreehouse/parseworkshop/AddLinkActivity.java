@@ -1,7 +1,7 @@
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -11,7 +11,7 @@ import com.parse.ParseObject;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
 
-public class AddLinkActivity extends Activity {
+public class AddLinkActivity extends AppCompatActivity {
 	//defination od coloun in parse
     public static final String shopNo = "ShopNo";
 	public static final String firstName = "First_Name";

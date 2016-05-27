@@ -142,9 +142,9 @@
 //}
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.telephony.SmsManager;
 import android.view.View;
 import android.widget.Button;
@@ -159,7 +159,7 @@ import com.teamtreehouse.readme.R;
 
 import java.util.List;
 
-public class AllocationFair extends Activity {
+public class AllocationFair extends AppCompatActivity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
     String fmember,cctype,wheatConvert,mobileNo,Message;
     int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt,wheatFairInt,riceFairInt,sugarFairInt,costToPay;
@@ -186,15 +186,16 @@ public class AllocationFair extends Activity {
         getStatus=(Button)findViewById(R.id.checkStatus);
 
 
-        
-        if(cctype.equals("ORANGE")){
-        orangeCard();
-        }
-        else if(cctype.equals("WHITE")){
-            whiteCard();
-        }
-        else if(cctype.equals("YELLOW")){
-            yellowCard();
+        switch (cctype) {
+            case "ORANGE":
+                orangeCard();
+                break;
+            case "WHITE":
+                whiteCard();
+                break;
+            case "YELLOW":
+                yellowCard();
+                break;
         }
 
 
@@ -285,7 +286,7 @@ public class AllocationFair extends Activity {
 
 
                     getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
-                    getRice.setText(riceInt + " * " + mem + " =" + riceTotal + " Kg");
+                    getRice.setText(riceInt + " * " + mem + " = " + riceTotal + " Kg");
                     getSugar.setText(sugarInt + " Kg");
 
                     //getting total fair
