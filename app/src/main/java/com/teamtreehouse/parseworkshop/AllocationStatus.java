@@ -1,6 +1,5 @@
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -28,8 +27,9 @@ public class AllocationStatus extends AppCompatActivity {
     int remainingWheat,remainingRice,ramainingSugar;
     String id,objectId,user;
     Button successUpdate;
-    String updateWheat,updateRice,updateSugar;
+    String updateWheat,updateRice,updateSugar,setUser;
     ParseUser currentUser;
+
 
 
 
@@ -133,30 +133,35 @@ public class AllocationStatus extends AppCompatActivity {
 //
 //            }
 //        });
+                if(user.equals("oHC3vXyeoJ")){
+                    setUser="kQ5Ktckvhx";
+                }else if(user.equals("y7tM7clzr5")){
+                    setUser="IfnmIC6FaT";
+                }
 
                 ParseQuery queryupdate = new ParseQuery("AllocationStatus");
-            queryupdate.getInBackground("kQ5Ktckvhx", new GetCallback() {
-                @Override
-                public void done(ParseObject parseObject, ParseException e) {
-                    //for jaymanale@gmail.com object id //hardcoded
-                    if(e==null){
-                        parseObject.put("WheatQuantityStatus", updateWheat);
-                       parseObject.put("RiceQuantityStatus", updateRice);
-                        parseObject.put("SugarQuantityStatus", updateSugar);
-                        parseObject.saveInBackground();
+                queryupdate.getInBackground(setUser, new GetCallback() {
+                    @Override
+                    public void done(ParseObject parseObject, ParseException e) {
+                        //for jaymanale@gmail.com object id //hardcoded
+                        if(e==null){
+                            parseObject.put("WheatQuantityStatus", updateWheat);
+                            parseObject.put("RiceQuantityStatus", updateRice);
+                            parseObject.put("SugarQuantityStatus", updateSugar);
+                            parseObject.saveInBackground();
+                        }
                     }
-                }
-            });
+                });
 
                 Toast.makeText(AllocationStatus.this,
                         "Record updated successfully: "+ currentUser.get("username"),
-                               Toast.LENGTH_LONG).show();
+                        Toast.LENGTH_LONG).show();
                 Intent allocation = new Intent(AllocationStatus.this, MainFeedActivity.class);
 
-                       startActivity(allocation);
+                startActivity(allocation);
 
 
-    }
+            }
         });
     }
 
@@ -186,7 +191,7 @@ public class AllocationStatus extends AppCompatActivity {
                     String recAvaiSugar = list.get(0).getString("SugarQuantityStatus");
 
 
-                   companyIdObject.getObjectId();
+                    companyIdObject.getObjectId();
 
                     //converting to integer
 
