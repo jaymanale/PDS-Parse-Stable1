@@ -44,6 +44,7 @@ public class MainFeedActivity extends AppCompatActivity {
 
 
 
+
     @Override
 	public void onCreate(final Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -59,6 +60,7 @@ public class MainFeedActivity extends AppCompatActivity {
         submit=(Button)findViewById(R.id.button);
         Cancel=(Button)findViewById(R.id.cancel);
         verify=(Button)findViewById(R.id.codeVerification);
+
 
 //        CheckCode=Integer.parseInt(getVerifiyString);
 
@@ -90,7 +92,14 @@ public class MainFeedActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View view) {
-                usercardno.setCursorVisible(false);
+
+                String userCardNoTest=usercardno.getText().toString();
+                int cardNoLength=userCardNoTest.length();
+                if(!userCardNoTest.equals("") && cardNoLength ==6){
+
+
+
+                    usercardno.setCursorVisible(false);
                 mProgressBar.setVisibility(View.VISIBLE);
 
                 // getting random number
@@ -145,6 +154,10 @@ public class MainFeedActivity extends AppCompatActivity {
                     }
                 });
 
+            }else{
+                    Toast.makeText(MainFeedActivity.this,"Please enter 6 digits Ration Card No" ,Toast.LENGTH_LONG).show();
+
+                }
             }
         });
     }
