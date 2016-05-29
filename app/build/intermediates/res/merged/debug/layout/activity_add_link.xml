@@ -22,7 +22,8 @@
         android:hint="First Name"
         android:singleLine="true"
         android:ems="10"
-        android:inputType="textPersonName">
+
+        android:inputType="textCapWords">
 
         <requestFocus />
     </EditText>
@@ -37,7 +38,7 @@
         android:singleLine="true"
         android:layout_marginTop="1dp"
         android:padding="14dp"
-        android:inputType="text"
+        android:inputType="textCapWords"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
         />
 

@@ -161,7 +161,6 @@
 //}
 package com.teamtreehouse.parseworkshop;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -169,15 +168,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.parse.ParseObject;
 import com.teamtreehouse.readme.R;
 
 
 public class Retrieve_data extends AppCompatActivity {
 
 
-    TextView getfName, getlName, getCardno, getCardtype, getMobile, getAddress,getFamilyMember;
+    TextView getfName, getlName, lastVisit,getCardno, getCardtype, getMobile, getAddress,getFamilyMember;
     Button getAllocation;
-    String reccType,recFmember,recMobileno;
+    String reccType,recFmember,recMobileno,time,reccName;
+    ParseObject pds;
 
 
     @Override
@@ -185,9 +186,12 @@ public class Retrieve_data extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.retrieve_data);
         init();
+
         Allocation();
 
+
     }
+
 
 
     public void Allocation() {
@@ -198,6 +202,7 @@ public class Retrieve_data extends AppCompatActivity {
                 allocation.putExtra("ctype",reccType);
                 allocation.putExtra("fmember",recFmember);
                 allocation.putExtra("fNumber",recMobileno);
+                allocation.putExtra("cardNumber",reccName);
                 startActivity(allocation);
 
             }
@@ -213,18 +218,22 @@ public class Retrieve_data extends AppCompatActivity {
         getFamilyMember=(TextView)findViewById(R.id.fmemberview);
         getMobile = (TextView) findViewById(R.id.textView10);
         getAddress = (TextView) findViewById(R.id.textView12);
+        lastVisit=(TextView)findViewById(R.id.lastVisitDate);
         getAllocation = (Button) findViewById(R.id.button2);
+
 
 
         Intent submitbtn = getIntent();
 
         String recfName = submitbtn.getStringExtra("fName");
         String reclName = submitbtn.getStringExtra("lName");
-        String reccName = submitbtn.getStringExtra("cardNumber");
+         reccName = submitbtn.getStringExtra("cardNumber");
          reccType = submitbtn.getStringExtra("cardType");
          recFmember=submitbtn.getStringExtra("fmember");
          recMobileno = submitbtn.getStringExtra("mobileNo");
         String recAddress = submitbtn.getStringExtra("address");
+        String visitFlag=submitbtn.getStringExtra("time");
+
 
 
         getfName.setText(recfName);
@@ -234,6 +243,7 @@ public class Retrieve_data extends AppCompatActivity {
         getFamilyMember.setText(recFmember);
         getMobile.setText(recMobileno);
         getAddress.setText(recAddress);
+        lastVisit.setText(visitFlag);
 
 
 

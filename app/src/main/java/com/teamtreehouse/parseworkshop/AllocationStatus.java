@@ -27,7 +27,7 @@ public class AllocationStatus extends AppCompatActivity {
     int remainingWheat,remainingRice,ramainingSugar;
     String id,objectId,user;
     Button successUpdate;
-    String updateWheat,updateRice,updateSugar,setUser;
+    String updateWheat,updateRice,updateSugar,setUser,cNumber,objectId1;
     ParseUser currentUser;
 
 
@@ -48,6 +48,7 @@ public class AllocationStatus extends AppCompatActivity {
         soldWheat1=submitbtn.getIntExtra("soldWheat", 0);
         soldRice1=submitbtn.getIntExtra("soldRice", 0);
         soldSugar1=submitbtn.getIntExtra("soldSugar", 0);
+        cNumber=submitbtn.getStringExtra("cardNumbber");
 
 
 
@@ -133,10 +134,10 @@ public class AllocationStatus extends AppCompatActivity {
 //
 //            }
 //        });
-                if(user.equals("oHC3vXyeoJ")){
-                    setUser="kQ5Ktckvhx";
-                }else if(user.equals("y7tM7clzr5")){
-                    setUser="IfnmIC6FaT";
+                if (user.equals("oHC3vXyeoJ")) {
+                    setUser = "kQ5Ktckvhx";
+                } else if (user.equals("y7tM7clzr5")) {
+                    setUser = "IfnmIC6FaT";
                 }
 
                 ParseQuery queryupdate = new ParseQuery("AllocationStatus");
@@ -144,7 +145,7 @@ public class AllocationStatus extends AppCompatActivity {
                     @Override
                     public void done(ParseObject parseObject, ParseException e) {
                         //for jaymanale@gmail.com object id //hardcoded
-                        if(e==null){
+                        if (e == null) {
                             parseObject.put("WheatQuantityStatus", updateWheat);
                             parseObject.put("RiceQuantityStatus", updateRice);
                             parseObject.put("SugarQuantityStatus", updateSugar);
@@ -154,17 +155,56 @@ public class AllocationStatus extends AppCompatActivity {
                 });
 
                 Toast.makeText(AllocationStatus.this,
-                        "Record updated successfully: "+ currentUser.get("username"),
+                        "Record updated successfully: " + currentUser.get("username"),
                         Toast.LENGTH_LONG).show();
                 Intent allocation = new Intent(AllocationStatus.this, MainFeedActivity.class);
 
                 startActivity(allocation);
 
+                lastVisit();
+            }
+        });
 
+    }
+
+    private void lastVisit() {
+
+                dynamicUpdate();
+        ParseQuery query = new ParseQuery("AllocationDate");
+        query.getInBackground(objectId1, new GetCallback() {
+            public void done(ParseObject object, ParseException e) {
+                if (e == null) {
+                    object.put("CardNo", cNumber);
+
+                    object.saveInBackground();
+                } else {
+                    Toast.makeText(AllocationStatus.this,
+                            "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+
+
+                }
+            }
+        });
+
+
+    }
+    public void dynamicUpdate(){
+        final ParseQuery queryDynamic = new ParseQuery("AllocationDate");
+        queryDynamic.whereEqualTo("CardNo", cNumber);
+        queryDynamic.findInBackground(new FindCallback() {
+            @Override
+            public void done(List<ParseObject> list, ParseException e) {
+                if(e==null){
+                     objectId1=list.get(0).getObjectId();
+
+                }
+                else {
+                    Toast.makeText(AllocationStatus.this,
+                            "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
-
 
 
     public void init() {

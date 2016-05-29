@@ -21,6 +21,7 @@ import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
 
+import java.util.Date;
 import java.util.List;
 import java.util.Random;
 
@@ -33,8 +34,9 @@ public class MainFeedActivity extends AppCompatActivity {
 
 //    static MainFeedActivity INSTANCE;
     String data,recCardtype,recFmember,recFname,recLname,recCardno,recMobileno,recAddress;
-    String Message,randString,getVerifiyString,objedtid;
+    String Message,randString,getVerifiyString,objedtid,time;
     EditText usercardno,editVerification;
+    Date createdDate;
     int cardNo,rand,min=1000,max=9999,CheckCode;
     boolean doubleBackToExitPressedOnce = false;
     ParseUser currentUser;
@@ -85,7 +87,7 @@ public class MainFeedActivity extends AppCompatActivity {
 
         Toast.makeText(MainFeedActivity.this,"object :" +objedtid,Toast.LENGTH_LONG).show();
 
-//        final ParseObject pds=new ParseObject("Customer");
+//       final ParseObject pds=new ParseObject("Customer");
 
 
         submit.setOnClickListener(new View.OnClickListener() {
@@ -93,69 +95,67 @@ public class MainFeedActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                String userCardNoTest=usercardno.getText().toString();
-                int cardNoLength=userCardNoTest.length();
-                if(!userCardNoTest.equals("") && cardNoLength ==6){
-
+                String userCardNoTest = usercardno.getText().toString();
+                int cardNoLength = userCardNoTest.length();
+                if (!userCardNoTest.equals("") && cardNoLength == 6) {
 
 
                     usercardno.setCursorVisible(false);
-                mProgressBar.setVisibility(View.VISIBLE);
+                    mProgressBar.setVisibility(View.VISIBLE);
 
-                // getting random number
-                Random r = new Random();
-                rand = r.nextInt(max - min + 1) + min;
-                randString=Integer.toString(rand);
-                Message="Your PDS verification code is " + " " +randString;
+                    // getting random number
+                    Random r = new Random();
+                    rand = r.nextInt(max - min + 1) + min;
+                    randString = Integer.toString(rand);
+                    Message = "Your PDS verification code is " + " " + randString;
 
-                final ParseQuery query = new ParseQuery("Customer");
-                query.whereEqualTo("CardNo", usercardno.getText().toString());
-                query.findInBackground(new FindCallback() {
-                    public void done(List<ParseObject> results, ParseException e) {
-                        query.findInBackground(new FindCallback() {
-                            @Override
-                            public void done(List<ParseObject> list, ParseException e) {
-                                mProgressBar.setVisibility(View.INVISIBLE);
-                                if (e == null) {
-                                    if (list.size() > 0) {
+                    final ParseQuery query = new ParseQuery("Customer");
+                    query.whereEqualTo("CardNo", usercardno.getText().toString());
+                    query.findInBackground(new FindCallback() {
+                        public void done(List<ParseObject> results, ParseException e) {
+                            query.findInBackground(new FindCallback() {
+                                @Override
+                                public void done(List<ParseObject> list, ParseException e) {
+                                    mProgressBar.setVisibility(View.INVISIBLE);
+                                    if (e == null) {
+                                        if (list.size() > 0) {
 
-                                        //code for sms
+                                            //code for sms
 
-                                        recFname = list.get(0).getString("First_Name");
-                                        recLname = list.get(0).getString("Last_name");
-                                        recCardno = list.get(0).getString("CardNo");
-                                        recCardtype = list.get(0).getString("CardType");
-                                        recFmember = list.get(0).getString("FamilyMember");
-                                        recMobileno = list.get(0).getString("MobileNo");
-                                        recAddress = list.get(0).getString("Address");
+                                            recFname = list.get(0).getString("First_Name");
+                                            recLname = list.get(0).getString("Last_name");
+                                            recCardno = list.get(0).getString("CardNo");
+                                            recCardtype = list.get(0).getString("CardType");
+                                            recFmember = list.get(0).getString("FamilyMember");
+                                            recMobileno = list.get(0).getString("MobileNo");
+                                            recAddress = list.get(0).getString("Address");
 
+                                            retrieveDate();
 
-                                        sendSMS(recMobileno, Message);
-
-                                        codeVerify();
+                                            codeVerify();
 
 //                                    String name = pds.getString("First_Name");
-                                        cancleButton();
+                                            cancleButton();
 //                                        check.putExtra("CardTypeCheck",recCardtype);
 //                                        startActivity(check);
+                                        } else {
+                                            Toast.makeText(MainFeedActivity.this,
+                                                    "Invalid Card Number",
+                                                    Toast.LENGTH_LONG).show();
+                                        }
                                     } else {
                                         Toast.makeText(MainFeedActivity.this,
-                                                "Invalid Card Number",
-                                                Toast.LENGTH_LONG).show();
+                                                "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                     }
-                                } else {
-                                    Toast.makeText(MainFeedActivity.this,
-                                            "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
                                 }
-                            }
-                        });
+                            });
 
 
-                    }
-                });
+                        }
+                    });
 
-            }else{
-                    Toast.makeText(MainFeedActivity.this,"Please enter 6 digits Ration Card No" ,Toast.LENGTH_LONG).show();
+                } else {
+                    Toast.makeText(MainFeedActivity.this, "Please enter 6 digits Ration Card No", Toast.LENGTH_LONG).show();
 
                 }
             }
@@ -171,6 +171,22 @@ public class MainFeedActivity extends AppCompatActivity {
             }
         });
 
+
+    }
+    public void retrieveDate(){
+        final ParseQuery querydate = new ParseQuery("AllocationDate");
+        querydate.whereEqualTo("CardNo", usercardno.getText().toString());
+        querydate.findInBackground(new FindCallback() {
+            @Override
+            public void done(List<ParseObject> list, ParseException e) {
+                if(e==null){
+                    createdDate = list.get(0).getUpdatedAt();
+                    time = createdDate.toString();
+                    Toast.makeText(MainFeedActivity.this, "time: :" + time, Toast.LENGTH_LONG).show();
+
+                }
+            }
+        });
 
     }
 
@@ -212,6 +228,7 @@ public class MainFeedActivity extends AppCompatActivity {
                     submitbtn.putExtra("fmember", recFmember);
                     submitbtn.putExtra("mobileNo", recMobileno);
                     submitbtn.putExtra("address", recAddress);
+                    submitbtn.putExtra("time",time);
 
                     startActivity(submitbtn);
 

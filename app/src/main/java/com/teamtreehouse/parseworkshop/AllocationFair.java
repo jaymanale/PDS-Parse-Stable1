@@ -161,7 +161,7 @@ import java.util.List;
 
 public class AllocationFair extends AppCompatActivity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
-    String fmember,cctype,wheatConvert,mobileNo,Message;
+    String fmember,cctype,wheatConvert,mobileNo,Message,cardNumberUpdate;
     int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt,wheatFairInt,riceFairInt,sugarFairInt,costToPay;
     Button getStatus;
     @Override
@@ -174,6 +174,7 @@ public class AllocationFair extends AppCompatActivity {
          cctype=submitbtn.getStringExtra("ctype");
         fmember=submitbtn.getStringExtra("fmember");
         mobileNo=submitbtn.getStringExtra("fNumber");
+        cardNumberUpdate=submitbtn.getStringExtra("cardNumber");
 
         Toast.makeText(AllocationFair.this, "Card Type:" + mobileNo, Toast.LENGTH_SHORT).show();
         getWheat = (TextView) findViewById(R.id.wheatQuantity);
@@ -225,6 +226,7 @@ public class AllocationFair extends AppCompatActivity {
                 allocation.putExtra("soldWheat", wheatTotal);
                 allocation.putExtra("soldRice",riceTotal);
                 allocation.putExtra("soldSugar",sugarInt);
+                allocation.putExtra("cardNumbber",cardNumberUpdate);
                 startActivity(allocation);
 
             }

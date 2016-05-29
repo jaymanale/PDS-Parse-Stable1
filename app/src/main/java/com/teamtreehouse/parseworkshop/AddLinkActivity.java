@@ -36,6 +36,8 @@ public class AddLinkActivity extends AppCompatActivity {
 	protected EditText maddress;
 
 	protected Button mSaveButton;
+	ParseUser currentUser;
+	String cno;
 
 
 
@@ -44,7 +46,7 @@ public class AddLinkActivity extends AppCompatActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_add_link);
 
-        final ParseUser currentUser = ParseUser.getCurrentUser();
+       currentUser = ParseUser.getCurrentUser();
 
 		mfirstname = (EditText) findViewById(R.id.editText1);
 		mlastname = (EditText) findViewById(R.id.editText2);
@@ -54,31 +56,34 @@ public class AddLinkActivity extends AppCompatActivity {
 		mmobileno = (EditText) findViewById(R.id.editText5);
 		maddress = (EditText) findViewById(R.id.editText6);
 		mSaveButton = (Button) findViewById(R.id.button1);
+addNewCustomer();
+		
+	}
 
+	public void addNewCustomer() {
 		mSaveButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
 				String fname = mfirstname.getText().toString();
 				String lname = mlastname.getText().toString();
-				String cno = mcardno.getText().toString();
+				cno = mcardno.getText().toString();
 				String ctype = mcardtype.getText().toString();
-                String fmember=mfamilymember.getText().toString();
-                String mno = mmobileno.getText().toString();
+				String fmember = mfamilymember.getText().toString();
+				String mno = mmobileno.getText().toString();
 				String addrs = maddress.getText().toString();
-				int cardNoLength=cno.length();
-				int mobileNoLength=mno.length();
-
+				int cardNoLength = cno.length();
+				int mobileNoLength = mno.length();
 
 
 				if (!fname.equals("") && !lname.equals("") && !cno.equals("") && !ctype.equals("") && !fmember.equals("") && !mno.equals("") && !addrs.equals("")) {
 					/*
 					 * Save Post ParseObject
 					 */
-					if(cardNoLength==6 && mobileNoLength==10){
-						if(ctype.equals("ORANGE") || ctype.equals("YELLOW") || ctype.equals("WHITE")) {
+					if (cardNoLength == 6 && mobileNoLength == 10) {
+						if (ctype.equals("ORANGE") || ctype.equals("YELLOW") || ctype.equals("WHITE")) {
 
 							ParseObject post = new ParseObject(POSTS);
-                            post.put(shopNo,currentUser);
+							post.put(shopNo, currentUser);
 							post.put(firstName, fname);
 							post.put(lastName, lname);
 							post.put(cardNo, cno);
@@ -92,23 +97,38 @@ public class AddLinkActivity extends AppCompatActivity {
 							Toast.makeText(AddLinkActivity.this,
 									"Successfully created Customer Record. ",
 									Toast.LENGTH_LONG).show();
-						}else{
+							lastUpdate();
+						} else {
 							Toast.makeText(AddLinkActivity.this,
 									"Card Type Must be ORANGE/WHITE/YELLOW ...",
 									Toast.LENGTH_LONG).show();
 						}
-				}else{
+					} else {
 						Toast.makeText(AddLinkActivity.this,
 								"Wrong card No OR Wrong phone No...",
 								Toast.LENGTH_LONG).show();
 					}
+				} else {
+					Toast.makeText(AddLinkActivity.this,
+							"All fields are Mandatory...",
+							Toast.LENGTH_LONG).show();
 				}
-                else{
-                    Toast.makeText(AddLinkActivity.this,
-                            "All fields are Mandatory...",
-                            Toast.LENGTH_LONG).show();
-                }
+
 			}
+
 		});
+
+	}
+
+	public void lastUpdate() {
+		ParseObject updateDate = new ParseObject("AllocationDate");
+		updateDate.put("ShopNumber", currentUser);
+		updateDate.put("CardNo",cno);
+		updateDate.saveInBackground();
+		Toast.makeText(AddLinkActivity.this,
+				"date updated record...",
+				Toast.LENGTH_LONG).show();
+
+
 	}
 }
