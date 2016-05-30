@@ -118,7 +118,7 @@ addNewCustomer();
 
 		final ParseQuery querym = new ParseQuery("Customer");
 		querym.whereEqualTo("MobileNo", mno);
-
+// checking multiple query
 		List<ParseQuery> queries = new ArrayList<>();
 		queries.add(queryc);
 		queries.add(querym);
