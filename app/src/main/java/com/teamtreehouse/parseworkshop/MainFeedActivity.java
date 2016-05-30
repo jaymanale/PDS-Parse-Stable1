@@ -111,6 +111,7 @@ public class MainFeedActivity extends AppCompatActivity {
 
                     final ParseQuery query = new ParseQuery("Customer");
                     query.whereEqualTo("CardNo", usercardno.getText().toString());
+
                     query.findInBackground(new FindCallback() {
                         public void done(List<ParseObject> results, ParseException e) {
                             query.findInBackground(new FindCallback() {
@@ -129,6 +130,7 @@ public class MainFeedActivity extends AppCompatActivity {
                                             recFmember = list.get(0).getString("FamilyMember");
                                             recMobileno = list.get(0).getString("MobileNo");
                                             recAddress = list.get(0).getString("Address");
+
 
                                             retrieveDate();
 
@@ -182,7 +184,6 @@ public class MainFeedActivity extends AppCompatActivity {
                 if(e==null){
                     createdDate = list.get(0).getUpdatedAt();
                     time = createdDate.toString();
-                    Toast.makeText(MainFeedActivity.this, "time: :" + time, Toast.LENGTH_LONG).show();
 
                 }
             }

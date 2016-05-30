@@ -140,6 +140,8 @@ public class AllocationStatus extends AppCompatActivity {
                     setUser = "IfnmIC6FaT";
                 }
 
+
+
                 ParseQuery queryupdate = new ParseQuery("AllocationStatus");
                 queryupdate.getInBackground(setUser, new GetCallback() {
                     @Override
@@ -166,6 +168,9 @@ public class AllocationStatus extends AppCompatActivity {
         });
 
     }
+
+
+
 
     private void lastVisit() {
 

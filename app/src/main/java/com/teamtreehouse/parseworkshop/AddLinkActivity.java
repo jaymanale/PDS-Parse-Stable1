@@ -7,9 +7,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.parse.GetCallback;
+import com.parse.ParseException;
 import com.parse.ParseObject;
+import com.parse.ParseQuery;
 import com.parse.ParseUser;
 import com.teamtreehouse.readme.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class AddLinkActivity extends AppCompatActivity {
 	//defination od coloun in parse
@@ -37,7 +43,7 @@ public class AddLinkActivity extends AppCompatActivity {
 
 	protected Button mSaveButton;
 	ParseUser currentUser;
-	String cno;
+	String cno,fname,lname,ctype,fmember,mno,addrs;
 
 
 
@@ -64,13 +70,13 @@ addNewCustomer();
 		mSaveButton.setOnClickListener(new View.OnClickListener() {
 			@Override
 			public void onClick(View v) {
-				String fname = mfirstname.getText().toString();
-				String lname = mlastname.getText().toString();
+				 fname = mfirstname.getText().toString();
+				 lname = mlastname.getText().toString();
 				cno = mcardno.getText().toString();
-				String ctype = mcardtype.getText().toString();
-				String fmember = mfamilymember.getText().toString();
-				String mno = mmobileno.getText().toString();
-				String addrs = maddress.getText().toString();
+				 ctype = mcardtype.getText().toString();
+				 fmember = mfamilymember.getText().toString();
+				 mno = mmobileno.getText().toString();
+				addrs = maddress.getText().toString();
 				int cardNoLength = cno.length();
 				int mobileNoLength = mno.length();
 
@@ -82,22 +88,9 @@ addNewCustomer();
 					if (cardNoLength == 6 && mobileNoLength == 10) {
 						if (ctype.equals("ORANGE") || ctype.equals("YELLOW") || ctype.equals("WHITE")) {
 
-							ParseObject post = new ParseObject(POSTS);
-							post.put(shopNo, currentUser);
-							post.put(firstName, fname);
-							post.put(lastName, lname);
-							post.put(cardNo, cno);
-							post.put(cardType, ctype);
-							post.put(familyMember, fmember);
-							post.put(mobile, mno);
-							post.put(personAddress, addrs);
-							post.saveInBackground();
+							cNumberMnumberValidation();
 
-							finish();
-							Toast.makeText(AddLinkActivity.this,
-									"Successfully created Customer Record. ",
-									Toast.LENGTH_LONG).show();
-							lastUpdate();
+
 						} else {
 							Toast.makeText(AddLinkActivity.this,
 									"Card Type Must be ORANGE/WHITE/YELLOW ...",
@@ -119,15 +112,71 @@ addNewCustomer();
 		});
 
 	}
+	public  void cNumberMnumberValidation(){
+		final ParseQuery queryc = new ParseQuery("Customer");
+		queryc.whereEqualTo("CardNo", cno);
+
+		final ParseQuery querym = new ParseQuery("Customer");
+		querym.whereEqualTo("MobileNo", mno);
+
+		List<ParseQuery> queries = new ArrayList<>();
+		queries.add(queryc);
+		queries.add(querym);
+
+		ParseQuery mainQuery = ParseQuery.or(queries);
+
+		mainQuery.getFirstInBackground(new GetCallback() {
+			@Override
+			public void done(ParseObject parseObject, ParseException e) {
+				if(e == null)
+				{
+					//object exists
+					Toast.makeText(AddLinkActivity.this,
+							"Ration Card No Or Mobile No Exist in Database...",
+							Toast.LENGTH_LONG).show();
+				}
+				else
+				{
+					if(e.getCode() == ParseException.OBJECT_NOT_FOUND)
+					{
+						//object doesn't exist
+						ParseObject post = new ParseObject(POSTS);
+						post.put(shopNo, currentUser);
+						post.put(firstName, fname);
+						post.put(lastName, lname);
+						post.put(cardNo, cno);
+						post.put(cardType, ctype);
+						post.put(familyMember, fmember);
+						post.put(mobile, mno);
+						post.put(personAddress, addrs);
+						post.saveInBackground();
+
+						finish();
+						Toast.makeText(AddLinkActivity.this,
+								"Successfully created Customer Record. ",
+								Toast.LENGTH_LONG).show();
+						lastUpdate();
+					}
+					else
+					{
+						//unknown error, debug
+						Toast.makeText(AddLinkActivity.this,
+								"Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+
+					}
+				}
+			}
+		});
+
+
+	}
 
 	public void lastUpdate() {
 		ParseObject updateDate = new ParseObject("AllocationDate");
 		updateDate.put("ShopNumber", currentUser);
 		updateDate.put("CardNo",cno);
 		updateDate.saveInBackground();
-		Toast.makeText(AddLinkActivity.this,
-				"date updated record...",
-				Toast.LENGTH_LONG).show();
+
 
 
 	}
