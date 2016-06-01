@@ -1,348 +1,369 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="false">
+    android:fillViewport="false"
+    android:orientation="vertical">
+
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
         <TextView
+            android:id="@+id/quantityststus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/QuantityStatusTitle"
-            android:textSize="25sp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/quantityststus" />
+            android:textSize="25sp" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/totalwheat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Wheat"                android:layout_gravity="left|top"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="105dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/totalwheat" />
+                android:text="Total Wheat"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/totalwheatQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/totalwheatQuantity" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/totalrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Rice"                android:layout_gravity="left|top"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="125dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/totalrice" />
+                android:text="Total Rice"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/totalriceQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/totalriceQuantity" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/totalsugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Sugar"
                 android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="110dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/totalsugar" />
+                android:text="Total Sugar"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/totalsugarQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/totalsugarQuantity" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
 
         <TextView
+            android:id="@+id/availableQuantity"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="10dp"
             android:text="@string/AvailableQTitle"
-            android:textSize="25sp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/availableQuantity" />
+            android:textSize="25sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/ramainingwheat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wheat"
                 android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="155dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/ramainingwheat"/>
+                android:text="Wheat"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/AvailableWheatQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/AvailableWheatQuantity" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/ramainingRice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rice"                android:layout_gravity="left|top"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="172dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/ramainingRice" />
+                android:text="Rice"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/AvailableRiceQuantity"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/AvailableRiceQuantity" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/ramainingSugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sugar"                android:layout_gravity="left|top"
-                android:layout_marginRight="160dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/ramainingSugar" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/AvailableSugarQuantity" />
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="160dp"
+                android:text="Sugar"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/AvailableSugarQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
 
 
         <TextView
+            android:id="@+id/remainQ"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/RamainingQTitle"
-            android:textSize="25sp"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
             android:layout_marginTop="10dp"
-            android:layout_gravity="center"
-            android:id="@+id/remainQ" />
+            android:text="@string/RamainingQTitle"
+            android:textSize="25sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/remainwheat"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Wheat"                android:layout_gravity="left|top"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="155dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/remainwheat" />
+                android:text="Wheat"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/remainWheatQ"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/remainWheatQ" />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/remainrice"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Rice"                android:layout_gravity="left|top"
+                android:layout_gravity="left|top"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginRight="175dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/remainrice" />
+                android:text="Rice"
+                android:textSize="21sp" />
 
             <TextView
+                android:id="@+id/remainRiceQ"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/remainRiceQ"  />
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
+            android:background="#c0c0c0" />
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp">
+            android:orientation="horizontal">
 
             <TextView
+                android:id="@+id/remainsugar"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Sugar"                android:layout_gravity="left|top"
-                android:layout_marginRight="160dp"
-                android:layout_marginLeft="40dp"
-                android:layout_marginBottom="20dp"
-                android:textSize="21sp"
-                android:id="@+id/remainsugar" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textSize="21sp"
-                android:text="fetching..."
                 android:layout_gravity="left|top"
-                android:id="@+id/remainSugarQ" />
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="160dp"
+                android:text="Sugar"
+                android:textSize="21sp" />
+
+            <TextView
+                android:id="@+id/remainSugarQ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left|top"
+                android:text="fetching..."
+                android:textSize="21sp" />
 
 
         </LinearLayout>
+
         <View
             android:layout_width="fill_parent"
             android:layout_height="2dp"
-            android:background="#c0c0c0"/>
-
-
+            android:background="#c0c0c0" />
 
 
         <Button
+            android:id="@+id/success"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:theme="@style/MyButton"
-            android:text="Success"
-            android:id="@+id/success"
-            android:layout_marginTop="20dp"
-
-            android:textColor="#fff"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/editText"
 
             android:layout_margin="10dp"
+
+            android:layout_marginTop="20dp"
+            android:text="Success"
+            android:textColor="#fff"
             android:textSize="20sp"
-            android:layout_below="@+id/editText"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true" />
+            android:theme="@style/MyButton" />
 
 
     </LinearLayout>

@@ -1,3 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<items version="2" />
+<items version="2" >
 
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\libs\android-smart-image-view-1.0.0.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="d76ea8c3e9a60101244d6d04aff8cc75888570f0">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\android-smart-image-view-1.0.0_e9d0e78ef5e38bfe7e6c197540b20bbc87b9de55.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\AppData\Local\Android\sdk1\extras\android\m2repository\com\android\support\support-annotations\23.2.1\support-annotations-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="ccb693bc0774fcb637246f7360de25b4af7df318">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\support-annotations-23.2.1_bca395414d8758320ede3588a6c5adcf4e4782f6.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\exploded-aar\com.android.support\animated-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3469cb457f10f74c28cbc05f069b6c894f6cbdd0">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\com.android.support-animated-vector-drawable-23.2.1_5112fcc505ae7527e0ea3085adeae885236b1315.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\exploded-aar\com.android.support\support-vector-drawable\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="673d77a5bbddd766037f088e775df525c46407f0">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\com.android.support-support-vector-drawable-23.2.1_7fe7d0ad80ec38e73bf0604d8a2506a2c6729ba9.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\libs\internal_impl-23.2.1.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="607a3d0b8013b4ccbfeb0b7cb293351994e021fb">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\internal_impl-23.2.1_d056f074d2c68504e710a3cbac684a01467a6955.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="e4d0cbb0b999604b349062f0214a0a228a7fd151">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\com.android.support-appcompat-v7-23.2.1_0f485b51e0e6c4ebb8886e91bb12ef326e953398.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\exploded-aar\com.android.support\support-v4\23.2.1\jars\classes.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="3be474b1b21b31cf2fa93fe6bd641ae108d96452">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\com.android.support-support-v4-23.2.1_0ad66d37c521cb088e9095bb32c81a3620d33631.jar" />
+    </item>
+    <item
+        jar="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\libs\Parse-1.2.2.jar"
+        jumboMode="false"
+        revision="23.0.2"
+        sha1="507264e0ffaa17b19b0e0d534d2da650f520a74a">
+        <dex dex="C:\Users\Jay\Documents\PDS-Parse-Stable1\app\build\intermediates\pre-dexed\debug\Parse-1.2.2_600a55b9658fbfd52113b309cef93cdf1cbefc47.jar" />
+    </item>
+
+</items>

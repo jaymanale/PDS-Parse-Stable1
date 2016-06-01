@@ -685,7 +685,6 @@ int layout select_dialog_item_material 0x7f030029
 int layout select_dialog_multichoice_material 0x7f03002a
 int layout select_dialog_singlechoice_material 0x7f03002b
 int layout support_simple_spinner_dropdown_item 0x7f03002c
-int layout user_list_item 0x7f03002d
 int menu activity_authenticate 0x7f0c0000
 int menu activity_login_or_signup 0x7f0c0001
 int menu activity_main_list 0x7f0c0002

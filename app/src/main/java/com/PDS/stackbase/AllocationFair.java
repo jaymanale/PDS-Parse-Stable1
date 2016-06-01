@@ -1,145 +1,3 @@
-//package com.teamtreehouse.parseworkshop;
-//
-//import android.app.Activity;
-//import android.os.Bundle;
-//import android.widget.ProgressBar;
-//import android.widget.TextView;
-//
-//import com.parse.GetCallback;
-//import com.parse.ParseException;
-//import com.parse.ParseObject;
-//import com.parse.ParseQuery;
-//import com.teamtreehouse.readme.R;
-//
-//public class AllocationFair extends Activity {
-//    protected ProgressBar mProgressBar;
-//TextView getWheat,getRice,getSugar,getWheatFair,getRiceFair,getSugarFair,costView;
-//    String CardTyperec,fmember;
-//    String s1,s2;
-//    String oCard="ORANGE",yCard="YELLOW",wCard="WHITE";
-//    int familyMembercount;
-//
-//
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.allocation_fair);
-//
-//
-////        final ParseObject gameScore = new ParseObject("Allocation");
-////        Intent allocation=getIntent();
-////         CardTyperec=allocation.getStringExtra("checkType");
-//////         fmember=allocation.getStringExtra("fmember");
-////            familyMembercount=allocation.getIntExtra("fmember",0);
-//
-//
-////        if (CardTyperec=="O"){
-////            orangeCard(fmember);
-////        }else if(CardTyperec=="Y"){
-////            yellowCard(fmember);
-////        }
-////        else{
-////            whiteCard(fmember);
-////        }    getWheat=(TextView)findViewById(R.id.wheatQuantity);
-//
-//
-////        Intent c1=getIntent();
-////        String cardType=c1.getStringExtra("CardTypeCheck");
-////        if(cardType.equals(oCard)){
-////            init();
-////        }
-//
-//
-////            ParseObject cardOption=new ParseObject("Customer");
-////            String cardTypeCheck = cardOption.getString("CardType");
-////            if(cardTypeCheck=="ORANGE"){
-////                init();
-////            }
-//
-////            Intent i=getIntent();
-////            String cardOrange=i.getStringExtra("cardTypecheck");
-////
-////            if(cardOrange.equals(oCard)){
-////                init();
-////            }
-////
-//
-//init();
-//
-//    }
-//
-//
-//
-//
-//    private void init() {
-//        getRice = (TextView) findViewById(R.id.riceQuantity);
-//        getSugar = (TextView) findViewById(R.id.sugarQuantity);
-//        getWheatFair = (TextView) findViewById(R.id.FairWheatQuantity);
-//        getRiceFair = (TextView) findViewById(R.id.FairRiceQuantity);
-//        getSugarFair = (TextView) findViewById(R.id.FairSugarQuantity);
-//        costView = (TextView) findViewById(R.id.totalCost1);
-//
-//
-//                        final ParseQuery query = new ParseQuery("Allocation");
-//
-//                            query.getInBackground("dy3keagcCC", new GetCallback() {
-//
-//                                @Override
-//                                public void done(ParseObject parseObject, ParseException e) {
-//                                    if (e == null) {
-//
-////                                        int recWheatUser=familyMembercount;
-//
-//                                        int recWheat = parseObject.getInt("Wheat");
-//                                        int recRice = parseObject.getInt("Rice");
-//                                        int recSugar = parseObject.getInt("Sugar");
-//                                        int recWheatFair = parseObject.getInt("WheatFair");
-//                                        int recRiceFair = parseObject.getInt("RiceFair");
-//                                        int recSugarFair = parseObject.getInt("SugarFair");
-//
-//
-//
-//                                        getWheat.setText(recWheat + " Kg");
-//                                        getRice.setText(recRice + " Kg");
-//                                        getSugar.setText(recSugar + " Kg");
-//                                        getWheatFair.setText(recWheatFair + "/Kg");
-//                                        getRiceFair.setText(recRiceFair + "/Kg");
-//                                        getSugarFair.setText(recSugarFair + "/Kg");
-//
-//                                        int costToPay = ((recWheat * recWheatFair) + (recRice * recRiceFair) + (recSugar * recSugarFair));
-//                                        costView.setText(costToPay + "Rs");
-//
-//
-//                                    }
-//                                }
-//                            });
-//
-//
-////                query.whereEqualTo("objectId", "dy3keagcCC");
-////            query.findInBackground(new FindCallback() {
-////                @Override
-////            public void done(List<ParseObject> list, ParseException e) {
-////                if (e == null) {
-////                    String recWheat
-////                    getWheat.setText("wheat kg:" + recWheat);
-////
-////
-////                } else {
-////                    Toast.makeText(AllocationFair.this,
-////                            "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
-////
-////                }
-////                    }
-////                });
-//
-//
-//
-//
-//
-//
-//
-//    }
-//}
 package com.PDS.stackbase;
 
 import android.content.Intent;
@@ -151,19 +9,20 @@ import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.PDS.readme.R;
 import com.parse.FindCallback;
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
-import com.PDS.readme.R;
 
 import java.util.List;
 
 public class AllocationFair extends AppCompatActivity {
     TextView getWheat, getRice, getSugar, getWheatFair, getRiceFair, getSugarFair, costView;
-    String fmember,cctype,wheatConvert,mobileNo,Message,cardNumberUpdate;
-    int wheatTotal,riceTotal,sugarInt,wheatInt,mem,riceInt,wheatFairInt,riceFairInt,sugarFairInt,costToPay;
+    String fmember, cctype, wheatConvert, mobileNo, Message, cardNumberUpdate;
+    int wheatTotal, riceTotal, sugarInt, wheatInt, mem, riceInt, wheatFairInt, riceFairInt, sugarFairInt, costToPay;
     Button getStatus;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -171,12 +30,12 @@ public class AllocationFair extends AppCompatActivity {
 
         final ParseObject gameScore = new ParseObject("Allocation");
         Intent submitbtn = getIntent();
-         cctype=submitbtn.getStringExtra("ctype");
-        fmember=submitbtn.getStringExtra("fmember");
-        mobileNo=submitbtn.getStringExtra("fNumber");
-        cardNumberUpdate=submitbtn.getStringExtra("cardNumber");
+        cctype = submitbtn.getStringExtra("ctype");
+        fmember = submitbtn.getStringExtra("fmember");
+        mobileNo = submitbtn.getStringExtra("fNumber");
+        cardNumberUpdate = submitbtn.getStringExtra("cardNumber");
 
-        Toast.makeText(AllocationFair.this, "Card Type:" + mobileNo, Toast.LENGTH_SHORT).show();
+//        Toast.makeText(AllocationFair.this, "Card Type:" + mobileNo, Toast.LENGTH_SHORT).show();
         getWheat = (TextView) findViewById(R.id.wheatQuantity);
         getRice = (TextView) findViewById(R.id.riceQuantity);
         getSugar = (TextView) findViewById(R.id.sugarQuantity);
@@ -184,7 +43,7 @@ public class AllocationFair extends AppCompatActivity {
         getRiceFair = (TextView) findViewById(R.id.FairRiceQuantity);
         getSugarFair = (TextView) findViewById(R.id.FairSugarQuantity);
         costView = (TextView) findViewById(R.id.totalCost1);
-        getStatus=(Button)findViewById(R.id.checkStatus);
+        getStatus = (Button) findViewById(R.id.checkStatus);
 
 
         switch (cctype) {
@@ -202,38 +61,38 @@ public class AllocationFair extends AppCompatActivity {
 
         getStatusButton();
 
-//        cardTtpeCheck=Retrieve_data.getActivityInstance().getData();
+
 //
 //        Toast.makeText(AllocationFair.this, "Data from first activity is:" + cardTtpeCheck, Toast.LENGTH_SHORT).show();
 
     }
 
 
-
     public void getStatusButton() {
         getStatus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Message="Total Allocated Quantity- \nWheat: " +wheatTotal +" Kg"+ ", Rice: "+ riceTotal + " Kg"+", Sugar " +
-                        sugarInt + " Kg"+ "\nFair /Kg-\nWheat: Rs. "+ wheatFairInt + ", Rice: Rs. "+riceFairInt + ", Sugar: Rs. " +
-                sugarFairInt + "\n\n Total Fair: Rs. "+costToPay;
-                Toast.makeText(AllocationFair.this, "message" + Message, Toast.LENGTH_SHORT).show();
+                Message = "Total Allocated Quantity- \nWheat: " + wheatTotal + " Kg" + ", Rice: " + riceTotal + " Kg" + ", Sugar " +
+                        sugarInt + " Kg" + "\nFair /Kg-\nWheat: Rs. " + wheatFairInt + ", Rice: Rs. " + riceFairInt + ", Sugar: Rs. " +
+                        sugarFairInt + "\n\n Total Fair: Rs. " + costToPay;
+//                Toast.makeText(AllocationFair.this, "message" + Message, Toast.LENGTH_SHORT).show();
 
                 sendSMS(mobileNo, Message);
                 Intent allocation = new Intent(AllocationFair.this, AllocationStatus.class);
 //                wheatConvert =Integer.toString(wheatTotal);
 
                 allocation.putExtra("soldWheat", wheatTotal);
-                allocation.putExtra("soldRice",riceTotal);
-                allocation.putExtra("soldSugar",sugarInt);
-                allocation.putExtra("cardNumbber",cardNumberUpdate);
+                allocation.putExtra("soldRice", riceTotal);
+                allocation.putExtra("soldSugar", sugarInt);
+                allocation.putExtra("cardNumbber", cardNumberUpdate);
                 startActivity(allocation);
 
             }
         });
 
     }
-    public void sendSMS(String phoneNumber, String message){
+
+    public void sendSMS(String phoneNumber, String message) {
 
         try {
             SmsManager smsManager = SmsManager.getDefault();
@@ -250,14 +109,12 @@ public class AllocationFair extends AppCompatActivity {
     }
 
 
-
-
     private void yellowCard() {
 
         //        final ParseObject gameScore = new ParseObject("Allocation");
         final ParseQuery query = new ParseQuery("Allocation");
 //       ParseQuery Cquery =new ParseQuery("Customer");
-        query.whereEqualTo("CardType",cctype);
+        query.whereEqualTo("CardType", cctype);
 
 
         query.findInBackground(new FindCallback() {
@@ -275,16 +132,15 @@ public class AllocationFair extends AppCompatActivity {
 //                      Conrting to integer
                     wheatInt = Integer.parseInt(recWheat);
                     riceInt = Integer.parseInt(recRice);
-                     sugarInt = Integer.parseInt(recSugar);
+                    sugarInt = Integer.parseInt(recSugar);
                     wheatFairInt = Integer.parseInt(recWheatFair);
                     riceFairInt = Integer.parseInt(recRiceFair);
                     sugarFairInt = Integer.parseInt(recSugarFair);
-                     mem = Integer.parseInt(fmember);
+                    mem = Integer.parseInt(fmember);
 
                     // getting total quantity
-                     wheatTotal = wheatInt * mem;
-                     riceTotal = riceInt * mem;
-
+                    wheatTotal = wheatInt * mem;
+                    riceTotal = riceInt * mem;
 
 
                     getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
@@ -300,14 +156,7 @@ public class AllocationFair extends AppCompatActivity {
                     getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
                     getSugarFair.setText(sugarFairInt + " * " + sugarInt + " = " + "Rs. " + sugarFair);
 
-//                    getRice.setText(riceInt + "Kg" );
-//                    getSugar.setText(recSugar + " Kg");
-//                    getWheatFair.setText(recWheatFair + "/Kg");
-//                    getRiceFair.setText(recRiceFair + "/Kg");
-//                    getSugarFair.setText(recSugarFair + "/Kg");
-
-//                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                     costToPay = wheatFair + riceFair + sugarFair;
+                    costToPay = wheatFair + riceFair + sugarFair;
                     costView.setText("Rs. " + costToPay);
 
 
@@ -320,7 +169,6 @@ public class AllocationFair extends AppCompatActivity {
         });
 
 
-
     }
 
     private void whiteCard() {
@@ -328,7 +176,7 @@ public class AllocationFair extends AppCompatActivity {
         //        final ParseObject gameScore = new ParseObject("Allocation");
         final ParseQuery query = new ParseQuery("Allocation");
 //       ParseQuery Cquery =new ParseQuery("Customer");
-        query.whereEqualTo("CardType",cctype);
+        query.whereEqualTo("CardType", cctype);
 
 
         query.findInBackground(new FindCallback() {
@@ -345,17 +193,16 @@ public class AllocationFair extends AppCompatActivity {
 
 //                      Conrting to integer
                     wheatInt = Integer.parseInt(recWheat);
-                     riceInt = Integer.parseInt(recRice);
-                     sugarInt = Integer.parseInt(recSugar);
-                     wheatFairInt = Integer.parseInt(recWheatFair);
+                    riceInt = Integer.parseInt(recRice);
+                    sugarInt = Integer.parseInt(recSugar);
+                    wheatFairInt = Integer.parseInt(recWheatFair);
                     riceFairInt = Integer.parseInt(recRiceFair);
-                     sugarFairInt = Integer.parseInt(recSugarFair);
-                     mem = Integer.parseInt(fmember);
+                    sugarFairInt = Integer.parseInt(recSugarFair);
+                    mem = Integer.parseInt(fmember);
 
                     // getting total quantity
                     wheatTotal = wheatInt * mem;
-                     riceTotal = riceInt * mem;
-
+                    riceTotal = riceInt * mem;
 
 
                     getWheat.setText(wheatInt + " * " + mem + "=" + wheatTotal + " Kg");
@@ -370,12 +217,6 @@ public class AllocationFair extends AppCompatActivity {
                     getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
                     getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
                     getSugarFair.setText(sugarFairInt + " * " + sugarInt + " = " + "Rs. " + sugarFair);
-
-//                    getRice.setText(riceInt + "Kg" );
-//                    getSugar.setText(recSugar + " Kg");
-//                    getWheatFair.setText(recWheatFair + "/Kg");
-//                    getRiceFair.setText(recRiceFair + "/Kg");
-//                    getSugarFair.setText(recSugarFair + "/Kg");
 
 //                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
                     costToPay = wheatFair + riceFair + sugarFair;
@@ -394,12 +235,12 @@ public class AllocationFair extends AppCompatActivity {
     }
 
     private void orangeCard() {
-     
+
 
 //        final ParseObject gameScore = new ParseObject("Allocation");
         final ParseQuery query = new ParseQuery("Allocation");
 //       ParseQuery Cquery =new ParseQuery("Customer");
-       query.whereEqualTo("CardType",cctype);
+        query.whereEqualTo("CardType", cctype);
 
 
         query.findInBackground(new FindCallback() {
@@ -415,11 +256,11 @@ public class AllocationFair extends AppCompatActivity {
                     String recSugarFair = list.get(0).getString("SugarFair");
 
 //                      Conrting to integer
-                     wheatInt = Integer.parseInt(recWheat);
+                    wheatInt = Integer.parseInt(recWheat);
                     riceInt = Integer.parseInt(recRice);
                     sugarInt = Integer.parseInt(recSugar);
-                     wheatFairInt = Integer.parseInt(recWheatFair);
-                     riceFairInt = Integer.parseInt(recRiceFair);
+                    wheatFairInt = Integer.parseInt(recWheatFair);
+                    riceFairInt = Integer.parseInt(recRiceFair);
                     sugarFairInt = Integer.parseInt(recSugarFair);
                     mem = Integer.parseInt(fmember);
 
@@ -429,28 +270,20 @@ public class AllocationFair extends AppCompatActivity {
 //                    int sugarTotal = sugarInt * mem;
 
 
-                            getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
-                            getRice.setText(riceInt + " * " + mem + " = " + riceTotal + " Kg");
-                            getSugar.setText(sugarInt + " Kg");
+                    getWheat.setText(wheatInt + " * " + mem + " = " + wheatTotal + " Kg");
+                    getRice.setText(riceInt + " * " + mem + " = " + riceTotal + " Kg");
+                    getSugar.setText(sugarInt + " Kg");
 
-                            //getting total fair
-                            int wheatFair = wheatFairInt * wheatTotal;
-                            int riceFair = riceFairInt * riceTotal;
+                    //getting total fair
+                    int wheatFair = wheatFairInt * wheatTotal;
+                    int riceFair = riceFairInt * riceTotal;
 //                            int sugarFair = sugarFairInt * sugarTotal;
 
-                            getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
-                            getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
-                            getSugarFair.setText(sugarFairInt + " Kg");
-
-//                    getRice.setText(riceInt + "Kg" );
-//                    getSugar.setText(recSugar + " Kg");
-//                    getWheatFair.setText(recWheatFair + "/Kg");
-//                    getRiceFair.setText(recRiceFair + "/Kg");
-//                    getSugarFair.setText(recSugarFair + "/Kg");
-
-//                    int costToPay = ((wheatInt * wheatFairInt) + (riceInt * riceFairInt) + (sugarInt * sugarFairInt));
-                            costToPay = wheatFair + riceFair;
-                            costView.setText("Rs. " + costToPay);
+                    getWheatFair.setText(wheatFairInt + " * " + wheatTotal + " = " + "Rs. " + wheatFair);
+                    getRiceFair.setText(riceFairInt + " * " + riceTotal + " = " + "Rs. " + riceFair);
+                    getSugarFair.setText(sugarFairInt + " Kg");
+                    costToPay = wheatFair + riceFair;
+                    costView.setText("Rs. " + costToPay);
 
 
                 } else {
@@ -462,17 +295,5 @@ public class AllocationFair extends AppCompatActivity {
         });
 
 
-
-//        query.getInBackground("dy3keagcCC", new GetCallback() {
-//            @Override
-//            public void done(ParseObject parseObject, ParseException e) {
-//                if (e == null) {
-//
-//
-//
-//
-//                }
-//            }
-//        });
     }
 }

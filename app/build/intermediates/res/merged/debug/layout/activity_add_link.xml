@@ -1,145 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="false">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".AddLinkActivity">
+    android:fillViewport="false"
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/editText1"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:hint="First Name"
-        android:singleLine="true"
-        android:ems="10"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".AddLinkActivity">
 
-        android:inputType="textCapWords">
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:hint="First Name"
+            android:inputType="textCapWords"
+            android:padding="14dp"
 
-        <requestFocus />
-    </EditText>
+            android:singleLine="true">
 
-
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Last Name"
-        android:singleLine="true"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:inputType="textCapWords"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        />
+            <requestFocus />
+        </EditText>
 
 
-
-    <EditText
-        android:id="@+id/editText3"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Card No"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:inputType="number"
-        android:maxLength="6" />
-    <EditText
-        android:id="@+id/editText4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Card type"
-        android:singleLine="true"
-        android:layout_marginTop="1dp"
-        android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-        android:inputType="textCapCharacters"
-        android:padding="14dp"
-        android:maxLength="6"
-        />
-    <EditText
-        android:id="@+id/editText31"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:digits="0123456789"
-        android:hint="Family Member"
-        android:singleLine="true"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:maxLength="2"
-        android:inputType="number"
-         />
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:hint="Last Name"
+            android:inputType="textCapWords"
+            android:padding="14dp"
+            android:singleLine="true" />
 
 
-    <EditText
-        android:id="@+id/editText5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Mobile No"
-        android:singleLine="true"
-        android:digits="0123456789"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:inputType="number|phone"
-        android:maxLength="10" />
-    <EditText
-        android:id="@+id/editText6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Address"
-        android:singleLine="true"
-        android:ems="10"
-        android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/, "
-        android:inputType="textPostalAddress"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"/>
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ems="10"
+            android:hint="Card No"
+            android:inputType="number"
+            android:maxLength="6"
+            android:padding="14dp" />
 
-    <!--<EditText-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/editText6"-->
-    <!--android:ems="10"-->
-    <!--android:hint="Address"-->
-    <!--android:gravity="top|left"-->
-    <!--android:textSize="25dp"-->
-    <!--android:inputType="textMultiLine"-->
-    <!--android:layout_weight="0.29" />-->
-    <!--<EditText-->
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="wrap_content"-->
-    <!--android:id="@+id/editText7"-->
-    <!--android:ems="10"-->
-    <!--android:hint="LastSeen"-->
-    <!--android:gravity="top|left"-->
-    <!--android:textSize="25dp"-->
-    <!--android:inputType="datetime"/>-->
+        <EditText
+            android:id="@+id/editText4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+            android:ems="10"
+            android:hint="Card type"
+            android:inputType="textCapCharacters"
+            android:maxLength="6"
+            android:padding="14dp"
+            android:singleLine="true" />
+
+        <EditText
+            android:id="@+id/editText31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="Family Member"
+            android:inputType="number"
+            android:maxLength="2"
+            android:padding="14dp"
+            android:singleLine="true" />
 
 
-    <Button
-        android:id="@+id/button1"
-        android:theme="@style/MyButton"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:layout_margin="10dp"
-        android:text="Post"
-        android:longClickable="false"
+        <EditText
+            android:id="@+id/editText5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="0123456789"
+            android:ems="10"
+            android:hint="Mobile No"
+            android:inputType="number|phone"
+            android:maxLength="10"
+            android:padding="14dp"
+            android:singleLine="true" />
 
-        android:textColor="#fff"
+        <EditText
+            android:id="@+id/editText6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-/, "
+            android:ems="10"
+            android:hint="Address"
+            android:inputType="textPostalAddress"
+            android:padding="14dp"
+            android:singleLine="true" />
 
-        android:textSize="20sp" />
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/editText6"-->
+        <!--android:ems="10"-->
+        <!--android:hint="Address"-->
+        <!--android:gravity="top|left"-->
+        <!--android:textSize="25dp"-->
+        <!--android:inputType="textMultiLine"-->
+        <!--android:layout_weight="0.29" />-->
+        <!--<EditText-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/editText7"-->
+        <!--android:ems="10"-->
+        <!--android:hint="LastSeen"-->
+        <!--android:gravity="top|left"-->
+        <!--android:textSize="25dp"-->
+        <!--android:inputType="datetime"/>-->
 
 
-</LinearLayout>
-    </ScrollView>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:longClickable="false"
+            android:text="Post"
+            android:textColor="#fff"
+
+            android:textSize="20sp"
+
+            android:theme="@style/MyButton" />
+
+
+    </LinearLayout>
+</ScrollView>

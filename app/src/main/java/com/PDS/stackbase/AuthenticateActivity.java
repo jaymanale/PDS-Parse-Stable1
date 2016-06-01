@@ -11,10 +11,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
+import com.PDS.readme.R;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.PDS.readme.R;
 
 public class AuthenticateActivity extends AppCompatActivity {
 
@@ -64,58 +64,6 @@ public class AuthenticateActivity extends AppCompatActivity {
                     String username = mEmailField.getText().toString();
                     String password = mPasswordField.getText().toString();
 
-//				if (mAction.equals(LoginOrSignupActivity.SIGNUP)) {
-//					/*
-//					 * Sign up using ParseUser
-//					 */
-//					ParseUser user = new ParseUser();
-//					user.setUsername(username);
-//					user.setPassword(password);
-//
-//					user.signUpInBackground(new SignUpCallback() {
-//						public void done(ParseException e) {
-//							mProgressBar.setVisibility(View.INVISIBLE);
-//							if (e == null) {
-//								// Hooray! Let them use the app now.
-//								startActivity(new Intent(
-//										AuthenticateActivity.this,
-//										MainFeedActivity.class));
-//							} else {
-//								// Sign up didn't succeed. Look at the
-//								// ParseException to figure out what went wrong
-//								Toast.makeText(AuthenticateActivity.this,
-//										"Sign up failed! Try again.",
-//										Toast.LENGTH_LONG).show();
-//							}
-//						}
-//					});
-//				} else {
-//					/*
-//					 * Login using ParseUser
-//					 */
-//					ParseUser.logInInBackground(username, password,
-//							new LogInCallback() {
-//								public void done(ParseUser user,
-//										ParseException e) {
-//									mProgressBar.setVisibility(View.INVISIBLE);
-//									if (user != null) {
-//										// Hooray! The user is logged in.
-//										startActivity(new Intent(
-//												AuthenticateActivity.this,
-//												MainFeedActivity.class));
-//									} else {
-//										// Login failed. Look at the
-//										// ParseException to see what happened.
-//										Toast.makeText(
-//												AuthenticateActivity.this,
-//												"Login failed! Try again.",
-//												Toast.LENGTH_LONG).show();
-//									}
-//								}
-//							});
-//				}
-//
-
 
                     ParseUser.logInInBackground(username, password,
                             new LogInCallback() {
@@ -142,6 +90,7 @@ public class AuthenticateActivity extends AppCompatActivity {
         }
 
     }
+
     private void showProgressDialog(final Context context, final Runnable runnable) {
         final ProgressDialog ringProgressDialog = ProgressDialog.show(context, "Log In", "User Validation...", true);
         //you usually don't want the user to stop the current process, and this will make sure of that

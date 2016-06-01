@@ -1,59 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:fillViewport="false">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:fillViewport="false"
+    android:orientation="vertical">
 
-    <ImageView
-        android:layout_width="270dp"
-        android:layout_height="270dp"
-        android:layout_marginTop="10dp"
-        android:id="@+id/imageView"
-        android:src="@drawable/primarycolor"
-        android:layout_gravity="center_horizontal"
-        android:layout_weight="0.56" />
-    <EditText
-        android:id="@+id/editText1"
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:padding="14dp"
-        android:hint="@string/email_address_hint"
-        android:inputType="textEmailAddress">
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
 
-        <requestFocus />
-    </EditText>
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="270dp"
+            android:layout_height="270dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:layout_weight="0.56"
+            android:src="@drawable/primarycolor" />
 
-    <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="1dp"
-        android:padding="14dp"
-        android:hint="@string/password_hint"
-        android:inputType="textPassword" />
-    <Button
-        android:id="@+id/button1"
-        android:theme="@style/MyButton"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:text="@string/loginButtonLabel"
+        <EditText
+            android:id="@+id/editText1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="@string/email_address_hint"
+            android:inputType="textEmailAddress"
+            android:padding="14dp">
 
-        android:textColor="#fff"
+            <requestFocus />
+        </EditText>
 
-        android:textSize="20sp"
-        android:layout_margin="10dp"/>
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:ems="10"
+            android:hint="@string/password_hint"
+            android:inputType="textPassword"
+            android:padding="14dp" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_margin="10dp"
+            android:text="@string/loginButtonLabel"
+
+            android:textColor="#fff"
+
+            android:textSize="20sp"
+            android:theme="@style/MyButton" />
 
 
-
-</LinearLayout>
-    </ScrollView>
+    </LinearLayout>
+</ScrollView>
