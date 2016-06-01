@@ -4,6 +4,18 @@
         "source": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout-v14\\allocation_fair.xml"
     },
     {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\allocation_status.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout-v14\\allocation_status.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\retrieve_data.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout-v14\\retrieve_data.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\allocation_fair.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout-v14\\allocation_fair.xml"
+    },
+    {
         "merged": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\layout-v14\\retrieve_data.xml",
         "source": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\layout-v14\\retrieve_data.xml"
     },

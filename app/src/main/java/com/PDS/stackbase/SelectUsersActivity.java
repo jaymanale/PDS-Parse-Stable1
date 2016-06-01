@@ -1,11 +1,11 @@
-package com.teamtreehouse.parseworkshop;
+package com.PDS.stackbase;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ProgressBar;
 
 import com.parse.ParseObject;
-import com.teamtreehouse.readme.R;
+import com.PDS.readme.R;
 
 public class SelectUsersActivity extends AppCompatActivity {
 	

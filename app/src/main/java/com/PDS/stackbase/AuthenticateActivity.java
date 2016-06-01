@@ -1,4 +1,4 @@
-package com.teamtreehouse.parseworkshop;
+package com.PDS.stackbase;
 
 import android.app.ProgressDialog;
 import android.content.Context;
@@ -14,7 +14,7 @@ import android.widget.Toast;
 import com.parse.LogInCallback;
 import com.parse.ParseException;
 import com.parse.ParseUser;
-import com.teamtreehouse.readme.R;
+import com.PDS.readme.R;
 
 public class AuthenticateActivity extends AppCompatActivity {
 

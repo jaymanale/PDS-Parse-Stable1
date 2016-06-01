@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.teamtreehouse.readme"
+    package="com.PDS.readme"
     android:versionCode="3"
     android:versionName="1.0.2" >
 
@@ -12,14 +12,14 @@
 
 
     <application
-        android:name="com.teamtreehouse.parseworkshop.ParseWorkshopApplication"
+        android:name="com.PDS.stackbase.ParseWorkshopApplication"
 
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.teamtreehouse.parseworkshop.AuthenticateActivity"
+            android:name="com.PDS.stackbase.AuthenticateActivity"
             android:label="@string/app_name"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
@@ -31,44 +31,44 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.AllocationStatus"
+            android:name="com.PDS.stackbase.AllocationStatus"
             android:label="Status"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.MainFeedActivity"
+            android:name="com.PDS.stackbase.MainFeedActivity"
             android:label="@string/app_name"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.SelectUsersActivity"
+            android:name="com.PDS.stackbase.SelectUsersActivity"
             android:label="@string/title_activity_select_users"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.Dashboard"
+            android:name="com.PDS.stackbase.Dashboard"
             android:label="@string/vendordash"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.AddLinkActivity"
+            android:name="com.PDS.stackbase.AddLinkActivity"
             android:label="@string/title_activity_add_link"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
 
         <activity
-            android:name="com.teamtreehouse.parseworkshop.Retrieve_data"
+            android:name="com.PDS.stackbase.Retrieve_data"
             android:label="@string/user_information"
             android:configChanges="orientation"
             android:screenOrientation="portrait">
         </activity>
         <activity
-            android:name="com.teamtreehouse.parseworkshop.AllocationFair"
+            android:name="com.PDS.stackbase.AllocationFair"
             android:label="Allocation &amp; Fair"
             android:configChanges="orientation"
             android:screenOrientation="portrait">

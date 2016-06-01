@@ -159,7 +159,7 @@
 //
 //
 //}
-package com.teamtreehouse.parseworkshop;
+package com.PDS.stackbase;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -169,7 +169,7 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.parse.ParseObject;
-import com.teamtreehouse.readme.R;
+import com.PDS.readme.R;
 
 
 public class Retrieve_data extends AppCompatActivity {

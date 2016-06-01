@@ -1,4 +1,4 @@
-package com.teamtreehouse.parseworkshop;
+package com.PDS.stackbase;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,7 +14,7 @@ import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
-import com.teamtreehouse.readme.R;
+import com.PDS.readme.R;
 
 import java.util.List;
 

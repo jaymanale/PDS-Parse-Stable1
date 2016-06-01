@@ -12,6 +12,22 @@
         "source": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\activity_authenticate.xml"
     },
     {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_authenticate.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\activity_authenticate.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\menu\\select_users.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\select_users.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_main_list.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\activity_main_list.xml"
+    },
+    {
+        "merged": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\menu\\activity_login_or_signup.xml",
+        "source": "C:\\Users\\Jay\\Documents\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\activity_login_or_signup.xml"
+    },
+    {
         "merged": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\build\\intermediates\\res\\merged\\debug\\menu\\select_users.xml",
         "source": "C:\\Users\\Jay\\Desktop\\PDS-Parse-Stable1\\app\\src\\main\\res\\menu\\select_users.xml"
     }

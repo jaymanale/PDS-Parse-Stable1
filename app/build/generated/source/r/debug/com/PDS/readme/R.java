@@ -5,7 +5,7 @@
  * should not be modified by hand.
  */
 
-package com.teamtreehouse.readme;
+package com.PDS.readme;
 
 public final class R {
     public static final class anim {
@@ -1614,9 +1614,11 @@ containing a value of this type.
         public static final int circular_progress_bar=0x7f02004c;
         public static final int ic_action_refresh=0x7f02004d;
         public static final int ic_launcher=0x7f02004e;
-        public static final int notification_template_icon_bg=0x7f020051;
+        public static final int notification_template_icon_bg=0x7f020053;
         public static final int pds_logo=0x7f02004f;
-        public static final int treehouse_logo=0x7f020050;
+        public static final int primarycolor=0x7f020050;
+        public static final int primarycolour=0x7f020051;
+        public static final int treehouse_logo=0x7f020052;
     }
     public static final class id {
         public static final int AvailableRiceQuantity=0x7f0b007b;

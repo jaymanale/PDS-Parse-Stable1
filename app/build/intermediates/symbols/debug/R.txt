@@ -453,9 +453,11 @@ int drawable circle_shape 0x7f02004b
 int drawable circular_progress_bar 0x7f02004c
 int drawable ic_action_refresh 0x7f02004d
 int drawable ic_launcher 0x7f02004e
-int drawable notification_template_icon_bg 0x7f020051
+int drawable notification_template_icon_bg 0x7f020053
 int drawable pds_logo 0x7f02004f
-int drawable treehouse_logo 0x7f020050
+int drawable primarycolor 0x7f020050
+int drawable primarycolour 0x7f020051
+int drawable treehouse_logo 0x7f020052
 int id AvailableRiceQuantity 0x7f0b007b
 int id AvailableSugarQuantity 0x7f0b007d
 int id AvailableWheatQuantity 0x7f0b0079

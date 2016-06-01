@@ -16,7 +16,7 @@
         android:layout_height="270dp"
         android:layout_marginTop="10dp"
         android:id="@+id/imageView"
-        android:src="@drawable/pds_logo"
+        android:src="@drawable/primarycolor"
         android:layout_gravity="center_horizontal"
         android:layout_weight="0.56" />
     <EditText
